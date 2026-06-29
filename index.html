@@ -3,38 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raghav Kumar Jha — AI Product Manager</title>
-<meta name="description" content="AI Product Manager and full-stack builder. Case studies in multi-agent automation, enterprise analytics, and data products.">
+<title>Raghav Kumar Jha - AI Product Manager</title>
+<meta name="description" content="AI Product Manager at Heritage Foods. 7+ AI and data products shipped end-to-end.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script>
-  // Set theme before paint to avoid a light/dark flash on load
   (function(){
-    var saved = localStorage.getItem('theme');
-    var preferred = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    if(preferred === 'dark'){
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
+    var t = localStorage.getItem('theme');
+    if(t === 'light') document.documentElement.setAttribute('data-theme','light');
   })();
 </script>
 </head>
 <body>
 
-<!-- progress rail -->
 <div class="rail" aria-hidden="true"><div class="rail-fill" id="railFill"></div></div>
 
 <header class="topbar">
-  <a href="#top" class="topbar-mark">RKJ</a>
+  <a href="#top" class="topbar-mark">Raghav Kumar Jha</a>
   <nav class="topbar-nav">
-    <a href="#log">Log</a>
+    <a href="#cases">Work</a>
     <a href="#stack">Stack</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
   <div class="topbar-right">
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
       <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" stroke-linecap="round"/></svg>
     </button>
@@ -44,231 +39,756 @@
 
 <main id="top">
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-noise" aria-hidden="true"></div>
+  <div class="hero-inner">
     <div class="hero-grid">
+
       <div class="hero-copy">
-        <p class="eyebrow">AI Product Manager — Hyderabad, India</p>
-        <h1 class="hero-title">I ship the<br>pipeline,<br><span class="accent">not the deck.</span></h1>
-        <p class="hero-sub">Manager, Analytics &amp; AI at Heritage Foods (₹3,500+ Cr FMCG). I've taken 7+ AI and data products from a blank requirements doc to production — architecture, agents, and adoption included.</p>
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          <span class="hero-eyebrow-text">Open to PM roles - Hyderabad, India</span>
+        </div>
+        <h1 class="hero-title">
+          AI Product Manager<br>
+          <span class="hl">who builds</span><br>
+          <strong>what he specifies.</strong>
+        </h1>
+        <div class="hero-rule"></div>
+        <p class="hero-sub">
+          Currently building AI products at Heritage Foods.
+          Full-stack engineering background - I own the requirement,
+          the architecture, and the outcome. Not just the brief.
+        </p>
         <div class="hero-actions">
-          <a href="#log" class="btn btn-primary">Read the case log</a>
+          <a href="#cases" class="btn btn-primary">See the work</a>
           <a href="mailto:shyaamkumarjha@gmail.com" class="btn btn-ghost">Get in touch</a>
         </div>
       </div>
 
-      <div class="hero-diagram" aria-hidden="true">
-        <svg viewBox="0 0 380 380" id="pipelineSvg">
-          <!-- edges drawn by JS-friendly static paths -->
-          <g class="edges">
-            <path class="edge" d="M70,70 L190,70" />
-            <path class="edge" d="M190,70 L190,190" />
-            <path class="edge" d="M190,190 L70,190" />
-            <path class="edge" d="M190,190 L310,190" />
-            <path class="edge" d="M190,70 L310,70" />
-            <path class="edge" d="M70,190 L70,310" />
-            <path class="edge" d="M310,190 L310,310" />
-            <path class="edge" d="M70,310 L190,310" />
-            <path class="edge" d="M190,310 L310,310" />
-          </g>
-          <g class="nodes">
-            <g class="node" data-label="ingest" transform="translate(70,70)"><circle r="9"/></g>
-            <g class="node node-core" data-label="route" transform="translate(190,70)"><circle r="11"/></g>
-            <g class="node" data-label="validate" transform="translate(310,70)"><circle r="9"/></g>
-            <g class="node node-core" data-label="process" transform="translate(190,190)"><circle r="13"/></g>
-            <g class="node" data-label="enrich" transform="translate(70,190)"><circle r="9"/></g>
-            <g class="node" data-label="forecast" transform="translate(310,190)"><circle r="9"/></g>
-            <g class="node" data-label="verify" transform="translate(70,310)"><circle r="9"/></g>
-            <g class="node node-core" data-label="ship" transform="translate(190,310)"><circle r="11"/></g>
-            <g class="node" data-label="adopt" transform="translate(310,310)"><circle r="9"/></g>
-          </g>
-        </svg>
-        <p class="diagram-caption">A simplified read of the PO automation pipeline — five agents, one outcome.</p>
-      </div>
-    </div>
-
-    <div class="hero-metrics">
-      <div class="metric"><span class="metric-num">7+</span><span class="metric-label">products shipped end‑to‑end</span></div>
-      <div class="metric"><span class="metric-num">₹6.6 Cr</span><span class="metric-label">daily revenue under dashboards I built</span></div>
-      <div class="metric"><span class="metric-num">1,80,000+</span><span class="metric-label">stores mapped by one platform</span></div>
-      <div class="metric"><span class="metric-num">95%</span><span class="metric-label">accuracy, AI invoice parser</span></div>
-    </div>
-  </section>
-
-  <!-- ===================== CASE LOG ===================== -->
-  <section class="log" id="log">
-    <div class="section-head">
-      <p class="eyebrow">Selected work</p>
-      <h2>The case log</h2>
-      <p class="section-sub">Four entries, pulled from seven-plus shipped. Each one is a real production system, not a prototype.</p>
-    </div>
-
-    <!-- ENTRY 01 -->
-    <article class="entry" id="entry-po">
-      <div class="entry-meta">
-        <span class="entry-id">LOG / 01</span>
-        <span class="entry-tag">Multi-agent automation</span>
-      </div>
-      <h3 class="entry-title">PO Automation Engine</h3>
-      <p class="entry-dek">A 5-agent pipeline that turns a vendor email into a verified delivery — no human re-typing in between.</p>
-
-      <div class="entry-body">
-        <div class="entry-readout">
-          <div class="readout-row"><span>Problem</span><p>50–60 modern retail chains — Zepto, Blinkit, Reliance, D-Mart — sent purchase orders by email across 400+ delivery centers. Every PO was manually read, validated, and keyed in, for days at a time, with entry errors baked into the process.</p></div>
-          <div class="readout-row"><span>What I built</span><p>Architected and shipped a 5-agent AI pipeline: ingestion reads the inbound email, a validation agent checks it against contract terms, an order-creation agent generates the order, a scheduling agent slots delivery, and a GRN agent verifies goods received — each a discrete, auditable step rather than one opaque model call.</p></div>
-          <div class="readout-row"><span>My role</span><p>Owned requirements, agent-boundary design, and stakeholder sign-off across Sales, Supply Chain, and Finance. Worked with engineering on pipeline architecture and failure handling for edge-case POs.</p></div>
-          <div class="readout-row"><span>Result</span><p>Processing time fell from days to minutes. Manual entry errors were eliminated at the point they used to happen — entry itself.</p></div>
+      <div class="hero-panel">
+        <div class="hp-header">
+          <span class="hp-header-dot"></span>
+          <span>Impact at a glance</span>
         </div>
-        <div class="entry-stat">
-          <span class="stat-num">Days → Minutes</span>
-          <span class="stat-label">PO processing time, 400+ delivery centers</span>
+        <div class="hp-row">
+          <div class="hp-num">7+</div>
+          <div class="hp-label">AI &amp; data products shipped - blank doc to production</div>
+        </div>
+        <div class="hp-row">
+          <div class="hp-num">₹6.6 Cr</div>
+          <div class="hp-label">daily revenue under dashboards I own</div>
+        </div>
+        <div class="hp-row">
+          <div class="hp-num">+16,000 L</div>
+          <div class="hp-label">incremental milk/day from ML-backed territory redesign</div>
+        </div>
+        <div class="hp-row">
+          <div class="hp-num">95%</div>
+          <div class="hp-label">accuracy, AI invoice parser shipped for Finance</div>
         </div>
       </div>
-    </article>
 
-    <!-- ENTRY 02 -->
-    <article class="entry" id="entry-samarth">
-      <div class="entry-meta">
-        <span class="entry-id">LOG / 02</span>
-        <span class="entry-tag">Enterprise analytics</span>
-      </div>
-      <h3 class="entry-title">Heritage Samarth &amp; Prism</h3>
-      <p class="entry-dek">Self-serve analytics for two very different audiences: a Branch Manager checking today's numbers, and a data team chasing farmer-level churn.</p>
-
-      <div class="entry-body">
-        <div class="entry-readout">
-          <div class="readout-row"><span>Problem</span><p>Sales performance and collection-center health lived in disconnected reports. Leadership from Branch Manager to CEO needed real-time, role-appropriate visibility without waiting on an analyst.</p></div>
-          <div class="readout-row"><span>What I built</span><p>Samarth: a role-based analytics platform tracking real-time sales KPIs and SE performance with region drill-downs, governing ₹6.6 Cr in daily revenue visibility. Prism: applies RFM segmentation across 150+ collection centers, processing 10+ crore farmer-level rows to surface churn risk before it becomes a problem.</p></div>
-          <div class="readout-row"><span>My role</span><p>Defined the KPI taxonomy and role-based access model, prioritized the RFM segmentation approach with the data science team, and drove adoption across branch-to-CEO user tiers.</p></div>
-          <div class="readout-row"><span>Result</span><p>Self-serve visibility replaced manual reporting for revenue tracking and churn risk — the explicit pattern Flipkart's own JD describes wanting more of.</p></div>
-        </div>
-        <div class="entry-stat">
-          <span class="stat-num">10+ Cr rows</span>
-          <span class="stat-label">farmer-level data, segmented for churn risk</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- ENTRY 03 -->
-    <article class="entry" id="entry-geo">
-      <div class="entry-meta">
-        <span class="entry-id">LOG / 03</span>
-        <span class="entry-tag">Geospatial / ML</span>
-      </div>
-      <h3 class="entry-title">Geospatial Territory Redesign</h3>
-      <p class="entry-dek">Clustering 900+ field agents across six states to find the milk volume nobody was capturing.</p>
-
-      <div class="entry-body">
-        <div class="entry-readout">
-          <div class="readout-row"><span>Problem</span><p>Distributor placement had grown organically over years. Nobody could say with confidence which retail clusters were under-penetrated versus simply under-served by territory design.</p></div>
-          <div class="readout-row"><span>What I built</span><p>Applied KNN and DBSCAN clustering across field-agent and retail-coverage data spanning 900+ agents in six states to algorithmically surface under-penetrated clusters, then used that analysis to recommend new distributor placements.</p></div>
-          <div class="readout-row"><span>My role</span><p>Framed the business question as a clustering problem, ran the analysis, and presented the data-backed case to regional leadership — the part that actually decides whether a model becomes a decision.</p></div>
-          <div class="readout-row"><span>Result</span><p>16,000 litres per day in incremental milk sales unlocked through new distributor placement, backed by a model leadership could see and question.</p></div>
-        </div>
-        <div class="entry-stat">
-          <span class="stat-num">16,000 L/day</span>
-          <span class="stat-label">incremental sales from re-territorying</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- ENTRY 04 -->
-    <article class="entry" id="entry-purity">
-      <div class="entry-meta">
-        <span class="entry-id">LOG / 04</span>
-        <span class="entry-tag">Consumer-facing trust</span>
-      </div>
-      <h3 class="entry-title">Purity Ka Report Card</h3>
-      <p class="entry-dek">A QR code on a milk packet that lets any consumer look up the actual quality batch behind it.</p>
-
-      <div class="entry-body">
-        <div class="entry-readout">
-          <div class="readout-row"><span>Problem</span><p>Milk quality testing happened, but it was invisible to the end consumer — a trust gap with no product behind it.</p></div>
-          <div class="readout-row"><span>What I built</span><p>Conceived and delivered the platform end-to-end: an internal QA batch-entry portal, a public batch-code lookup site with PDF download, and QR code integration directly on packaging connecting the two.</p></div>
-          <div class="readout-row"><span>My role</span><p>Owned the product end-to-end — from the original concept through QA workflow design, public-facing UX, and the packaging integration handoff with operations.</p></div>
-          <div class="readout-row"><span>Result</span><p>Scaled to thousands of monthly lookups, with measurable consumer trust signals tracked directly by the brand team.</p></div>
-        </div>
-        <div class="entry-stat">
-          <span class="stat-num">1000s/mo</span>
-          <span class="stat-label">consumer batch lookups</span>
-        </div>
-      </div>
-    </article>
-
-  </section>
-
-  <!-- ===================== MORE SHIPPED (compact strip) ===================== -->
-  <section class="strip">
-    <p class="strip-label">Also shipped</p>
-    <div class="strip-grid">
-      <div class="strip-item"><h4>Vendor Onboarding Portal</h4><p>7-step approval workflow across PAN, Aadhaar, MSME, GST APIs. 4–6 weeks → under 48 hours, 200+ vendors/year.</p></div>
-      <div class="strip-item"><h4>Retail Survey &amp; Mapping</h4><p>Full retail census tool, shipped in under a month. 1,80,000+ stores, geofencing, S3 image capture, volume scoring.</p></div>
-      <div class="strip-item"><h4>Compliance Training Portal</h4><p>LLM-powered training with AI-generated quizzes and auto-summaries. 65% completion, 80% voluntary certificate sharing.</p></div>
-      <div class="strip-item"><h4>AI Invoice Parser</h4><p>Unstructured PO/non-PO formats → SAP-compatible output at 95% accuracy. 40+ hours/month saved for Finance.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== STACK ===================== -->
-  <section class="stack-section" id="stack">
-    <div class="section-head">
-      <p class="eyebrow">Tools of record</p>
-      <h2>What's under the hood</h2>
+<!-- ═══════════════════════════════ CASES ═══════════════════════════════ -->
+<section class="cases" id="cases">
+  <div class="cases-head reveal">
+    <span class="sec-eyebrow">Selected work</span>
+    <h2 class="sec-title">Four systems. All in production.</h2>
+    <p class="sec-sub">Each started as a blank requirements doc and ended as something real people rely on daily.</p>
+  </div>
+
+  <!-- ── CASE 01 ── -->
+  <article class="case reveal" id="case-po">
+    <div class="case-meta">
+      <span class="case-idx">01 /</span>
+      <span class="case-tag">Multi-agent automation</span>
     </div>
-    <div class="stack-grid">
-      <div class="stack-col">
-        <h4>AI &amp; Product</h4>
-        <ul><li>LLMs · RAG · LangChain</li><li>Multi-agent systems</li><li>PRDs · OKRs · Roadmaps</li><li>A/B testing · Funnel analysis</li></ul>
+    <h3 class="case-title">PO Automation Engine</h3>
+    <p class="case-dek">A 5-agent pipeline that turns a vendor email into a verified delivery - no human re-keying in between. Built for 50–60 retail chains across 400+ delivery centres.</p>
+
+    <div class="arch">
+      <div class="arch-eyebrow">System architecture - PO Automation Engine</div>
+      <svg class="arch-svg" viewBox="0 0 780 196" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="a1" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <polygon points="0 0, 7 3.5, 0 7" fill="#635E57" opacity="0.6"/>
+          </marker>
+          <marker id="a1h" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <polygon points="0 0, 7 3.5, 0 7" fill="#8A7250"/>
+          </marker>
+        </defs>
+
+        <!-- zone labels -->
+        <text x="68" y="13" class="ls" text-anchor="middle">INPUT</text>
+        <text x="390" y="13" class="ls" text-anchor="middle">AGENTS</text>
+        <text x="712" y="13" class="ls" text-anchor="middle">OUTPUT</text>
+
+        <!-- zone backgrounds -->
+        <rect x="10" y="18" width="116" height="148" rx="5" class="zone"/>
+        <rect x="140" y="18" width="498" height="148" rx="5" class="zone"/>
+        <rect x="654" y="18" width="116" height="148" rx="5" class="zone"/>
+
+        <!-- input -->
+        <rect x="22" y="68" width="92" height="48" rx="4" class="n"/>
+        <text x="68" y="89" class="lb" text-anchor="middle">Vendor email</text>
+        <text x="68" y="104" class="ls" text-anchor="middle">50–60 chains</text>
+
+        <!-- agent 1 -->
+        <rect x="152" y="72" width="82" height="40" rx="4" class="n"/>
+        <text x="193" y="89" class="lb" text-anchor="middle">Ingestion</text>
+        <text x="193" y="102" class="ls" text-anchor="middle">parse + extract</text>
+
+        <!-- agent 2 -->
+        <rect x="246" y="72" width="82" height="40" rx="4" class="n"/>
+        <text x="287" y="89" class="lb" text-anchor="middle">Validation</text>
+        <text x="287" y="102" class="ls" text-anchor="middle">contract check</text>
+
+        <!-- agent 3 - core, highlighted -->
+        <rect x="342" y="60" width="96" height="64" rx="4" class="nh"/>
+        <text x="390" y="85" class="lh" text-anchor="middle">Order</text>
+        <text x="390" y="100" class="lh" text-anchor="middle">Creation</text>
+        <text x="390" y="114" class="lsg" text-anchor="middle">→ SAP S/4HANA</text>
+
+        <!-- agent 4 -->
+        <rect x="452" y="72" width="82" height="40" rx="4" class="n"/>
+        <text x="493" y="89" class="lb" text-anchor="middle">Scheduling</text>
+        <text x="493" y="102" class="ls" text-anchor="middle">delivery slot</text>
+
+        <!-- agent 5 -->
+        <rect x="548" y="72" width="82" height="40" rx="4" class="n"/>
+        <text x="589" y="89" class="lb" text-anchor="middle">GRN Verify</text>
+        <text x="589" y="102" class="ls" text-anchor="middle">goods receipt</text>
+
+        <!-- output -->
+        <rect x="666" y="68" width="92" height="48" rx="4" class="nl"/>
+        <text x="712" y="89" class="lb" text-anchor="middle">Verified</text>
+        <text x="712" y="104" class="lb" text-anchor="middle">Delivery</text>
+
+        <!-- arrows -->
+        <line x1="114" y1="92" x2="149" y2="92" class="edge" marker-end="url(#a1)"/>
+        <line x1="234" y1="92" x2="244" y2="92" class="edge" marker-end="url(#a1)"/>
+        <line x1="328" y1="92" x2="340" y2="92" class="edge" marker-end="url(#a1)"/>
+        <line x1="438" y1="92" x2="450" y2="92" class="edgeh" marker-end="url(#a1h)"/>
+        <line x1="534" y1="92" x2="546" y2="92" class="edge" marker-end="url(#a1)"/>
+        <line x1="630" y1="92" x2="663" y2="92" class="edge" marker-end="url(#a1)"/>
+
+        <!-- retry arc -->
+        <path d="M342,136 Q287,158 287,114" stroke="#635E57" stroke-width="0.8" fill="none" stroke-dasharray="3 4" opacity="0.5" marker-end="url(#a1)"/>
+        <text x="260" y="170" class="ls">isolated retry on stage failure</text>
+      </svg>
+    </div>
+
+    <div class="case-body">
+      <div class="readout">
+        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">50–60 retail chains (Zepto, Blinkit, Reliance, D-Mart) sent POs by email across 400+ delivery centres. Each one was manually read, validated, and keyed into SAP - a process that took days.</p></div>
+        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">A 5-agent pipeline: ingestion reads the email, validation checks against contract terms, an order-creation agent generates the SAP entry, scheduling slots delivery, and a GRN agent verifies goods received. I owned requirements, agent-boundary design, and sign-off across Sales, Supply Chain, and Finance.</p></div>
+        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Discrete agents over one end-to-end model - POs touch financial records, so a failed stage needed to be retried in isolation, not by reprocessing the whole order. Each boundary was a deliberate trust checkpoint.</p></div>
+        <div class="rr"><span class="rr-k">Lesson</span><p class="rr-v">The MVP relied on predefined mappings for known PO formats. A v2 would feed exception resolutions back in, so the system becomes adaptive rather than staying rule-dependent.</p></div>
       </div>
-      <div class="stack-col">
-        <h4>Data &amp; ML</h4>
-        <ul><li>SQL · Python · Pandas</li><li>Scikit-learn · NLP</li><li>Holt-Winters forecasting</li><li>KNN · DBSCAN · RFM</li></ul>
-      </div>
-      <div class="stack-col">
-        <h4>Engineering</h4>
-        <ul><li>Flask · Django · React.js</li><li>REST APIs · AWS (S3, EC2)</li><li>SAP S/4HANA · Anaplan</li><li>Power BI · Tableau · Git</li></ul>
-      </div>
-      <div class="stack-col">
-        <h4>This site</h4>
-        <ul><li>Hand-coded HTML/CSS/JS</li><li>No framework, no build step</li><li>Deployed on Vercel</li><li><a href="https://github.com/" target="_blank" rel="noopener" id="repoLink">View source →</a></li></ul>
+      <div class="case-kpi">
+        <div class="kpi-n">Days → Minutes</div>
+        <p class="kpi-l">PO processing time across 400+ delivery centres</p>
       </div>
     </div>
-  </section>
+  </article>
 
-  <!-- ===================== ABOUT ===================== -->
-  <section class="about" id="about">
-    <div class="about-grid">
-      <div class="about-copy">
-        <p class="eyebrow">About</p>
-        <h2>MBA, but I still read the stack trace.</h2>
-        <p>I'm Raghav — currently Manager, Analytics &amp; AI at Heritage Foods, a ₹3,500+ Cr FMCG business, where I own AI and data products end-to-end: requirements, architecture, stakeholder alignment, and the part that actually ships.</p>
-        <p>Before the MBA at IIM Nagpur, I was a full-stack developer shipping production apps in Python, Django, and React. That's the part most AI PMs skip — I didn't, and it's why I can sit in an architecture review and a CEO readout in the same week and be useful in both.</p>
-        <p>I built this site myself for the same reason I build everything myself first: I'd rather show the working pipeline than describe it.</p>
+  <!-- ── CASE 02 ── -->
+  <article class="case reveal" id="case-samarth">
+    <div class="case-meta">
+      <span class="case-idx">02 /</span>
+      <span class="case-tag">Enterprise analytics</span>
+    </div>
+    <h3 class="case-title">Heritage Samarth &amp; Prism</h3>
+    <p class="case-dek">Self-serve analytics for two audiences with nothing in common: a Branch Manager checking today's revenue, and a data team surfacing farmer-level churn before it costs the business milk volume.</p>
+
+    <div class="arch">
+      <div class="arch-eyebrow">System architecture - Samarth + Prism</div>
+      <svg class="arch-svg" viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="a2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <polygon points="0 0, 7 3.5, 0 7" fill="#635E57" opacity="0.6"/>
+          </marker>
+          <marker id="a2h" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <polygon points="0 0, 7 3.5, 0 7" fill="#8A7250"/>
+          </marker>
+        </defs>
+
+        <!-- zone labels -->
+        <text x="62" y="13" class="ls" text-anchor="middle">SOURCES</text>
+        <text x="230" y="13" class="ls" text-anchor="middle">PROCESSING</text>
+        <text x="430" y="13" class="ls" text-anchor="middle">ACCESS</text>
+        <text x="660" y="13" class="ls" text-anchor="middle">CONSUMERS</text>
+
+        <!-- zones -->
+        <rect x="10" y="18" width="104" height="164" rx="5" class="zone"/>
+        <rect x="128" y="18" width="200" height="164" rx="5" class="zone"/>
+        <rect x="342" y="18" width="170" height="164" rx="5" class="zone"/>
+        <rect x="526" y="18" width="244" height="164" rx="5" class="zone"/>
+
+        <!-- sources -->
+        <rect x="20" y="38" width="84" height="34" rx="4" class="n"/>
+        <text x="62" y="59" class="lb" text-anchor="middle">SAP S/4HANA</text>
+        <rect x="20" y="82" width="84" height="34" rx="4" class="n"/>
+        <text x="62" y="103" class="lb" text-anchor="middle">Field data</text>
+        <rect x="20" y="126" width="84" height="34" rx="4" class="n"/>
+        <text x="62" y="147" class="lb" text-anchor="middle">Farmer rows</text>
+
+        <!-- samarth pipeline -->
+        <rect x="138" y="34" width="100" height="38" rx="4" class="n"/>
+        <text x="188" y="51" class="lb" text-anchor="middle">KPI pipeline</text>
+        <text x="188" y="65" class="ls" text-anchor="middle">real-time refresh</text>
+
+        <!-- prism pipeline -->
+        <rect x="138" y="84" width="100" height="38" rx="4" class="nh"/>
+        <text x="188" y="101" class="lh" text-anchor="middle">RFM model</text>
+        <text x="188" y="115" class="lsg" text-anchor="middle">10 Cr+ farmer rows</text>
+
+        <!-- churn seg -->
+        <rect x="252" y="118" width="76" height="34" rx="4" class="n"/>
+        <text x="290" y="136" class="lb" text-anchor="middle">Churn segs</text>
+        <text x="290" y="149" class="ls" text-anchor="middle">150+ centres</text>
+
+        <!-- access layer -->
+        <rect x="352" y="34" width="150" height="38" rx="4" class="n"/>
+        <text x="427" y="55" class="lb" text-anchor="middle">Role-based views</text>
+        <text x="427" y="69" class="ls" text-anchor="middle">Branch → CEO</text>
+
+        <rect x="352" y="88" width="150" height="66" rx="4" class="n"/>
+        <text x="427" y="109" class="lb" text-anchor="middle">Segment access</text>
+        <text x="427" y="124" class="ls" text-anchor="middle">data team · procurement</text>
+        <text x="427" y="138" class="ls" text-anchor="middle">churn risk surface</text>
+
+        <!-- consumers -->
+        <rect x="536" y="30" width="224" height="46" rx="4" class="nl"/>
+        <text x="648" y="52" class="lb" text-anchor="middle">Samarth - ₹6.6 Cr daily revenue</text>
+        <text x="648" y="67" class="ls" text-anchor="middle">BM · Regional Head · CEO</text>
+
+        <rect x="536" y="90" width="224" height="62" rx="4" class="nl"/>
+        <text x="648" y="112" class="lb" text-anchor="middle">Prism - churn risk prioritisation</text>
+        <text x="648" y="127" class="ls" text-anchor="middle">Procurement team</text>
+        <text x="648" y="142" class="ls" text-anchor="middle">Field intervention planning</text>
+
+        <!-- arrows -->
+        <line x1="104" y1="55" x2="135" y2="53" class="edge" marker-end="url(#a2)"/>
+        <line x1="104" y1="99" x2="135" y2="103" class="edge" marker-end="url(#a2)"/>
+        <line x1="104" y1="143" x2="135" y2="120" class="edge" marker-end="url(#a2)"/>
+        <line x1="238" y1="53" x2="350" y2="53" class="edge" marker-end="url(#a2)"/>
+        <line x1="238" y1="103" x2="250" y2="121" class="edge" marker-end="url(#a2)"/>
+        <line x1="328" y1="135" x2="350" y2="121" class="edgeh" marker-end="url(#a2h)"/>
+        <line x1="502" y1="53" x2="533" y2="53" class="edge" marker-end="url(#a2)"/>
+        <line x1="502" y1="121" x2="533" y2="121" class="edgeh" marker-end="url(#a2h)"/>
+      </svg>
+    </div>
+
+    <div class="case-body">
+      <div class="readout">
+        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Sales performance and collection-centre health lived in disconnected reports. Leadership from Branch Manager to CEO needed real-time, role-appropriate visibility - without waiting on an analyst.</p></div>
+        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Samarth: role-based analytics governing ₹6.6 Cr in daily revenue visibility, with region drill-downs and SE performance tracking. Prism: RFM segmentation across 150+ collection centres, processing 10+ crore farmer-level rows to surface churn risk before it becomes a procurement problem.</p></div>
+        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Chose RFM over a heavier ML churn model. The business needed interpretable segments to drive procurement and field decisions - stakeholder trust mattered as much as accuracy. RFM delivered that with far fewer data requirements.</p></div>
+        <div class="rr"><span class="rr-k">Lesson</span><p class="rr-v">Insight accuracy depended more on master data quality than on adding more analytics. A v2 would automate data quality checks and anomaly detection before generating recommendations - not after users noticed errors.</p></div>
       </div>
-      <div class="about-facts">
-        <div class="fact"><span>MBA</span><p>IIM Nagpur, 2023–25</p></div>
-        <div class="fact"><span>B.Tech CSE</span><p>G.B. Pant Govt. Engineering College, 2018–22</p></div>
-        <div class="fact"><span>Based in</span><p>Hyderabad, India</p></div>
+      <div class="case-kpi">
+        <div class="kpi-n">10+ Cr rows</div>
+        <p class="kpi-l">farmer-level data segmented for churn risk, 150+ collection centres</p>
       </div>
     </div>
-  </section>
+  </article>
 
-  <!-- ===================== CONTACT ===================== -->
-  <section class="contact" id="contact">
-    <h2>Let's talk pipelines.</h2>
-    <p>Open to Senior PM roles in AI-first data products.</p>
-    <div class="contact-links">
-      <a href="mailto:shyaamkumarjha@gmail.com">shyaamkumarjha@gmail.com</a>
-      <a href="https://linkedin.com/in/raghav-kumar-jha" target="_blank" rel="noopener">linkedin.com/in/raghav-kumar-jha</a>
-      <a href="tel:+919069026985">+91-90690-26985</a>
+  <!-- ── CASE 03 ── -->
+  <article class="case reveal" id="case-geo">
+    <div class="case-meta">
+      <span class="case-idx">03 /</span>
+      <span class="case-tag">Geospatial · ML</span>
     </div>
-  </section>
+    <h3 class="case-title">Geospatial Territory Redesign</h3>
+    <p class="case-dek">Clustering 900+ field agents across six states to find the milk volume nobody was capturing - and translating a model into a decision regional leadership would actually act on.</p>
+
+    <div class="arch">
+      <div class="arch-eyebrow">Analysis pipeline - territory clustering</div>
+      <svg class="arch-svg" viewBox="0 0 780 220" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <marker id="a3" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0,7 3.5,0 7" fill="#635E57" opacity=".6"/>
+    </marker>
+    <marker id="a3h" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0,7 3.5,0 7" fill="#8A7250"/>
+    </marker>
+  </defs>
+
+  <!-- STEP LABELS -->
+  <text x="75" y="20" class="ls" text-anchor="middle">INPUT</text>
+  <text x="230" y="20" class="ls" text-anchor="middle">SEARCH</text>
+  <text x="385" y="20" class="ls" text-anchor="middle">CLUSTERING</text>
+  <text x="555" y="20" class="ls" text-anchor="middle">INSIGHT</text>
+  <text x="710" y="20" class="ls" text-anchor="middle">ACTION</text>
+
+  <!-- INPUT -->
+  <rect x="10" y="45" width="130" height="82" rx="5" class="n"/>
+
+  <text x="75" y="74" class="lb" text-anchor="middle">
+    900+ Agents
+  </text>
+
+  <text x="75" y="95" class="ls" text-anchor="middle">
+    Retail Coverage
+  </text>
+
+  <text x="75" y="112" class="ls" text-anchor="middle">
+    6 States
+  </text>
+
+  <!-- KNN -->
+
+  <rect x="170" y="55" width="120" height="62" rx="5" class="n"/>
+
+  <text x="230" y="80" class="lb" text-anchor="middle">
+    KNN
+  </text>
+
+  <text x="230" y="99" class="ls" text-anchor="middle">
+    Nearby retailers
+  </text>
+
+  <!-- DBSCAN -->
+
+  <rect x="320" y="35" width="130" height="102" rx="5" class="nh"/>
+
+  <text x="385" y="66" class="lh" text-anchor="middle">
+    DBSCAN
+  </text>
+
+  <text x="385" y="88" class="lsg" text-anchor="middle">
+    Density clusters
+  </text>
+
+  <text x="385" y="107" class="lsg" text-anchor="middle">
+    Removes outliers
+  </text>
+
+  <text
+    x="385"
+    y="126"
+    class="ls"
+    text-anchor="middle"
+    style="fill:#635E57"
+  >
+    Natural market shape
+  </text>
+
+  <!-- GAPS -->
+
+  <rect x="480" y="45" width="150" height="82" rx="5" class="n"/>
+
+  <text x="555" y="74" class="lb" text-anchor="middle">
+    Coverage Map
+  </text>
+
+  <text x="555" y="95" class="ls" text-anchor="middle">
+    Under-served areas
+  </text>
+
+  <text x="555" y="112" class="ls" text-anchor="middle">
+    Opportunity clusters
+  </text>
+
+  <!-- ACTION -->
+
+  <rect x="660" y="35" width="110" height="102" rx="5" class="nl"/>
+
+  <text x="715" y="66" class="lb" text-anchor="middle">
+    Leadership
+  </text>
+
+  <text x="715" y="87" class="ls" text-anchor="middle">
+    Territory
+  </text>
+
+  <text x="715" y="105" class="ls" text-anchor="middle">
+    Decisions
+  </text>
+
+  <!-- ARROWS -->
+
+  <line
+    x1="140"
+    y1="86"
+    x2="167"
+    y2="86"
+    class="edge"
+    marker-end="url(#a3)"
+  />
+
+  <line
+    x1="290"
+    y1="86"
+    x2="317"
+    y2="86"
+    class="edge"
+    marker-end="url(#a3)"
+  />
+
+  <line
+    x1="450"
+    y1="86"
+    x2="477"
+    y2="86"
+    class="edgeh"
+    marker-end="url(#a3h)"
+  />
+
+  <line
+    x1="630"
+    y1="86"
+    x2="657"
+    y2="86"
+    class="edge"
+    marker-end="url(#a3)"
+  />
+
+  <!-- RESULT CARD -->
+
+  <rect
+    x="250"
+    y="165"
+    width="280"
+    height="42"
+    rx="5"
+    style="
+      fill:rgba(201,169,110,.08);
+      stroke:rgba(201,169,110,.25);
+      stroke-width:1;
+    "
+  />
+
+  <text
+    x="390"
+    y="184"
+    class="lh"
+    text-anchor="middle"
+    style="font-size:18px"
+  >
+    +16,000 L/day
+  </text>
+
+  <text
+    x="390"
+    y="200"
+    class="ls"
+    text-anchor="middle"
+  >
+    Incremental milk sales identified
+  </text>
+
+</svg>
+    </div>
+
+    <div class="case-body">
+      <div class="readout">
+        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Distributor placement had grown organically over years. No one could confidently identify which retail clusters were under-penetrated versus simply under-served by territory design.</p></div>
+        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Applied KNN and DBSCAN clustering across field-agent and retail-coverage data for 900+ agents in six states to algorithmically surface under-penetrated clusters, then built the data-backed case for new distributor placements to regional leadership.</p></div>
+        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Chose DBSCAN because retailers cluster naturally - not in uniform circles. It identifies real-density clusters while filtering outliers, producing recommendations that reflect market reality better than any fixed-radius approach would.</p></div>
+        <div class="rr"><span class="rr-k">Lesson</span><p class="rr-v">Accurate recommendations alone didn't drive adoption - users needed transparent reasoning and estimated business impact before acting on territory changes. A v2 would add distributor capacity, travel time, and serviceability constraints alongside geography.</p></div>
+      </div>
+      <div class="case-kpi">
+        <div class="kpi-n">+16,000 L/day</div>
+        <p class="kpi-l">incremental milk sales from new distributor placements backed by the model</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── CASE 04 ── -->
+  <article class="case reveal" id="case-purity">
+    <div class="case-meta">
+      <span class="case-idx">04 /</span>
+      <span class="case-tag">Consumer · Trust</span>
+    </div>
+    <h3 class="case-title">Purity Ka Report Card</h3>
+    <p class="case-dek">A QR code on a milk packet that lets any consumer verify the actual quality batch behind it. Conceived and shipped end-to-end: QA portal, public lookup site, and packaging integration.</p>
+
+    <div class="arch">
+      <div class="arch-eyebrow">System architecture - Purity Ka Report Card</div>
+      <svg class="arch-svg" viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="a4" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <polygon points="0 0, 7 3.5, 0 7" fill="#635E57" opacity="0.6"/>
+          </marker>
+          <marker id="a4h" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <polygon points="0 0, 7 3.5, 0 7" fill="#8A7250"/>
+          </marker>
+        </defs>
+
+        <!-- track labels -->
+        <text x="10" y="13" class="ls">INTERNAL</text>
+        <text x="10" y="130" class="ls">CONSUMER</text>
+
+        <!-- internal track -->
+        <rect x="10" y="22" width="100" height="40" rx="4" class="n"/>
+        <text x="60" y="40" class="lb" text-anchor="middle">QA Lab</text>
+        <text x="60" y="54" class="ls" text-anchor="middle">batch test results</text>
+
+        <rect x="128" y="22" width="110" height="40" rx="4" class="n"/>
+        <text x="183" y="40" class="lb" text-anchor="middle">QA Entry Portal</text>
+        <text x="183" y="54" class="ls" text-anchor="middle">internal web app</text>
+
+        <rect x="256" y="16" width="110" height="52" rx="4" class="nh"/>
+        <text x="311" y="38" class="lh" text-anchor="middle">Batch DB</text>
+        <text x="311" y="52" class="lsg" text-anchor="middle">unique batch codes</text>
+        <text x="311" y="64" class="lsg" text-anchor="middle">per production run</text>
+
+        <!-- QR bridge - centre -->
+        <rect x="256" y="88" width="110" height="52" rx="4" class="n"/>
+        <text x="311" y="109" class="lb" text-anchor="middle">QR Code</text>
+        <text x="311" y="123" class="ls" text-anchor="middle">printed on packaging</text>
+        <text x="311" y="136" class="ls" text-anchor="middle">→ lookup URL</text>
+
+        <!-- consumer track -->
+        <rect x="10" y="144" width="100" height="40" rx="4" class="n"/>
+        <text x="60" y="162" class="lb" text-anchor="middle">Smartphone</text>
+        <text x="60" y="176" class="ls" text-anchor="middle">scan QR → browser</text>
+
+        <rect x="128" y="144" width="110" height="40" rx="4" class="n"/>
+        <text x="183" y="162" class="lb" text-anchor="middle">Public lookup</text>
+        <text x="183" y="176" class="ls" text-anchor="middle">no app required</text>
+
+        <!-- output -->
+        <rect x="400" y="22" width="140" height="40" rx="4" class="n"/>
+        <text x="470" y="40" class="lb" text-anchor="middle">Quality report</text>
+        <text x="470" y="54" class="ls" text-anchor="middle">consumer-friendly PDF</text>
+
+        <rect x="400" y="144" width="140" height="40" rx="4" class="n"/>
+        <text x="470" y="162" class="lb" text-anchor="middle">Report + PDF</text>
+        <text x="470" y="176" class="ls" text-anchor="middle">download available</text>
+
+        <!-- metric -->
+        <rect x="564" y="78" width="200" height="54" rx="4" style="fill:rgba(201,169,110,0.08);stroke:rgba(201,169,110,0.22);stroke-width:1;"/>
+        <text x="664" y="102" class="lh" text-anchor="middle" style="font-size:18px;">1,000s / mo</text>
+        <text x="664" y="120" class="ls" text-anchor="middle">consumer batch lookups</text>
+
+        <!-- arrows internal -->
+        <line x1="110" y1="42" x2="125" y2="42" class="edge" marker-end="url(#a4)"/>
+        <line x1="238" y1="42" x2="253" y2="42" class="edge" marker-end="url(#a4)"/>
+        <line x1="366" y1="42" x2="397" y2="42" class="edge" marker-end="url(#a4)"/>
+        <!-- DB to QR -->
+        <line x1="311" y1="68" x2="311" y2="85" class="edgeh" marker-end="url(#a4h)"/>
+        <!-- consumer -->
+        <line x1="110" y1="164" x2="125" y2="164" class="edge" marker-end="url(#a4)"/>
+        <line x1="238" y1="164" x2="308" y2="140" class="edge" marker-end="url(#a4)"/>
+        <!-- outputs to metric -->
+        <line x1="540" y1="42" x2="560" y2="98" class="edge" marker-end="url(#a4)"/>
+        <line x1="540" y1="164" x2="560" y2="112" class="edge" marker-end="url(#a4)"/>
+      </svg>
+    </div>
+
+    <div class="case-body">
+      <div class="readout">
+        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Milk quality testing happened, but it was invisible to the end consumer - a trust gap with no product behind it.</p></div>
+        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Conceived and delivered the platform end-to-end: an internal QA batch-entry portal, a public batch-code lookup site with PDF download, and QR code integration directly on packaging connecting the two.</p></div>
+        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Chose a QR-enabled public web experience over an in-app feature - every consumer with a smartphone camera could instantly verify quality without downloading anything, maximising accessibility and trust at the point of purchase.</p></div>
+        <div class="rr"><span class="rr-k">Lesson</span><p class="rr-v">Transparency alone doesn't build trust - context does. Consumers wanted simple explanations of what quality parameters meant, not raw lab values. A v2 would pair batch reports with freshness indicators and product education, turning verification into ongoing engagement.</p></div>
+      </div>
+      <div class="case-kpi">
+        <div class="kpi-n">1,000s/mo</div>
+        <p class="kpi-l">consumer batch lookups, tracked as a brand trust signal</p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ═══════════════════════════════ SHIPPED ═══════════════════════════════ -->
+<section class="shipped reveal">
+  <p class="shipped-hd">Also shipped</p>
+  <div class="shipped-grid">
+    <div class="sc">
+      <div>
+        <div class="sc-title">Vendor Onboarding Portal</div>
+        <div class="sc-desc">7-step approval workflow across PAN, Aadhaar, MSME, and GST APIs. Replaced a 4–6 week manual process with a fully automated pipeline.</div>
+        <div class="sc-chips">
+          <span class="sc-chip">Flask</span><span class="sc-chip">REST APIs</span><span class="sc-chip">Workflow automation</span>
+        </div>
+      </div>
+      <div class="sc-stat">
+        <span class="sc-stat-n">48h</span>
+        <span class="sc-stat-l">was 4–6 weeks</span>
+      </div>
+    </div>
+    <div class="sc">
+      <div>
+        <div class="sc-title">Retail Survey &amp; Mapping</div>
+        <div class="sc-desc">Full retail census tool, shipped in under a month. Geofencing, S3 image capture, volume scoring across six states.</div>
+        <div class="sc-chips">
+          <span class="sc-chip">AWS S3</span><span class="sc-chip">Geofencing</span><span class="sc-chip">React</span>
+        </div>
+      </div>
+      <div class="sc-stat">
+        <span class="sc-stat-n">1.8L+</span>
+        <span class="sc-stat-l">stores mapped</span>
+      </div>
+    </div>
+    <div class="sc">
+      <div>
+        <div class="sc-title">Compliance Training Portal</div>
+        <div class="sc-desc">LLM-powered training with AI-generated quizzes and auto-summaries. 65% completion, 80% voluntary certificate sharing.</div>
+        <div class="sc-chips">
+          <span class="sc-chip">LLM</span><span class="sc-chip">RAG</span><span class="sc-chip">Django</span>
+        </div>
+      </div>
+      <div class="sc-stat">
+        <span class="sc-stat-n">80%</span>
+        <span class="sc-stat-l">cert sharing</span>
+      </div>
+    </div>
+    <div class="sc">
+      <div>
+        <div class="sc-title">AI Invoice Parser</div>
+        <div class="sc-desc">Unstructured PO and non-PO formats parsed to SAP-compatible output. 40+ hours saved per month for the Finance team.</div>
+        <div class="sc-chips">
+          <span class="sc-chip">LLM</span><span class="sc-chip">SAP S/4HANA</span><span class="sc-chip">Python</span>
+        </div>
+      </div>
+      <div class="sc-stat">
+        <span class="sc-stat-n">95%</span>
+        <span class="sc-stat-l">accuracy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ STACK ═══════════════════════════════ -->
+<section class="stack-sec" id="stack">
+  <div class="stack-head reveal">
+    <span class="sec-eyebrow">Tools of record</span>
+    <h2 class="sec-title">What's under the hood</h2>
+  </div>
+  <div class="stack-grid">
+    <div class="stack-col reveal">
+      <h4>AI &amp; Product</h4>
+      <ul>
+        <li>LLMs · RAG · LangChain</li>
+        <li>Multi-agent systems</li>
+        <li>PRDs · OKRs · Roadmaps</li>
+        <li>A/B testing · Funnel analysis</li>
+      </ul>
+    </div>
+    <div class="stack-col reveal">
+      <h4>Data &amp; ML</h4>
+      <ul>
+        <li>SQL · Python · Pandas</li>
+        <li>Scikit-learn · NLP</li>
+        <li>Holt-Winters forecasting</li>
+        <li>KNN · DBSCAN · RFM</li>
+      </ul>
+    </div>
+    <div class="stack-col reveal">
+      <h4>Engineering</h4>
+      <ul>
+        <li>Flask · Django · React.js</li>
+        <li>REST APIs · AWS S3, EC2</li>
+        <li>SAP S/4HANA · Anaplan</li>
+        <li>Power BI · Tableau · Git</li>
+      </ul>
+    </div>
+    <div class="stack-col reveal">
+      <h4>This site</h4>
+      <ul>
+        <li>Hand-coded HTML / CSS / JS</li>
+        <li>No framework, no build step</li>
+        <li>Deployed on Vercel</li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener">View source →</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-copy reveal">
+      <span class="sec-eyebrow">About</span>
+      <h2>MBA who still reads the stack trace.</h2>
+      <p>I'm Raghav - Manager, Analytics &amp; AI at Heritage Foods, a ₹3,500+ Cr FMCG business. I own AI and data products end-to-end: requirements, architecture, stakeholder alignment, and the shipping.</p>
+      <p>Before IIM Nagpur, I was a full-stack developer shipping production apps in Python, Django, and React. That's the part most AI PMs skip - I didn't, and it's why I can sit in an architecture review and a CEO readout in the same week and be genuinely useful in both.</p>
+      <p>I built this site myself for the same reason I build everything myself first: showing a working pipeline beats describing one.</p>
+    </div>
+    <div class="about-aside reveal">
+      <div class="af"><span class="af-k">Currently</span><span class="af-v">Manager, Analytics &amp; AI - Heritage Foods</span></div>
+      <div class="af"><span class="af-k">MBA</span><span class="af-v">IIM Nagpur, 2023–25</span></div>
+      <div class="af"><span class="af-k">B.Tech CSE</span><span class="af-v">G.B. Pant Govt. Engg. College, 2018–22</span></div>
+      <div class="af"><span class="af-k">Based in</span><span class="af-v">Hyderabad, India</span></div>
+      <div class="af"><span class="af-k">Looking for</span><span class="af-v open">PM - AI-first &amp; data products</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ TIMELINE ═══════════════════════════════ -->
+<section class="tl-sec">
+  <div class="tl-head reveal">
+    <span class="sec-eyebrow">Path here</span>
+    <h2 class="sec-title">How I got to AI products</h2>
+  </div>
+  <div class="tl">
+    <div class="tl-item reveal">
+      <span class="tl-y">2018–22</span>
+      <p class="tl-role">B.Tech, Computer Science</p>
+      <p class="tl-det">G.B. Pant Govt. Engineering College. Led full-stack dev of the college website.</p>
+    </div>
+    <div class="tl-item reveal">
+      <span class="tl-y">2022–23</span>
+      <p class="tl-role">Full-Stack Developer</p>
+      <p class="tl-det">Polestar Solutions. Shipped 3 production apps in Python, Django, React for enterprise clients.</p>
+    </div>
+    <div class="tl-item reveal">
+      <span class="tl-y">2023–25</span>
+      <p class="tl-role">MBA, IIM Nagpur</p>
+      <p class="tl-det">President, Toastmasters Club - 35+ member team, 15+ events.</p>
+    </div>
+    <div class="tl-item reveal">
+      <span class="tl-y">Apr–May '24</span>
+      <p class="tl-role">Analytics Intern → PPO</p>
+      <p class="tl-det">Heritage Foods. Built a cross-sell recommendation engine, earned a Pre-Placement Offer.</p>
+    </div>
+    <div class="tl-item cur reveal">
+      <span class="tl-y">2025–Present</span>
+      <p class="tl-role">Manager, Analytics &amp; AI</p>
+      <p class="tl-det">Heritage Foods. 7+ AI and data products, end-to-end ownership.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+<section class="contact" id="contact">
+  <h2>Let's talk.</h2>
+  <p>Open to PM roles in AI-first and data products.</p>
+  <div class="contact-links">
+    <a href="mailto:shyaamkumarjha@gmail.com">shyaamkumarjha@gmail.com</a>
+    <a href="https://linkedin.com/in/raghav-kumar-jha" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="tel:+919069026985">+91-90690-26985</a>
+  </div>
+</section>
 
 </main>
 
 <footer class="site-footer">
-  <p>Built with HTML, CSS &amp; JS by Raghav Kumar Jha — deployed on Vercel. <a href="https://github.com/" target="_blank" rel="noopener" id="repoLinkFooter">View source on GitHub →</a></p>
+  <p>Built with HTML, CSS &amp; JS by Raghav Kumar Jha · Deployed on Vercel · <a href="https://github.com/" target="_blank" rel="noopener">View source →</a></p>
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+  // update reveal class name
+  const reveals = document.querySelectorAll('.reveal');
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    reveals.forEach(el => el.classList.add('in'));
+  } else {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => obs.observe(el));
+  }
+</script>
 </body>
 </html>
