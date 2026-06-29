@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raghav Kumar Jha — AI Product Manager</title>
+<meta name="description" content="AI Product Manager and full-stack builder. Case studies in multi-agent automation, enterprise analytics, and data products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- progress rail -->
+<div class="rail" aria-hidden="true"><div class="rail-fill" id="railFill"></div></div>
+
+<header class="topbar">
+  <a href="#top" class="topbar-mark">RKJ</a>
+  <nav class="topbar-nav">
+    <a href="#log">Log</a>
+    <a href="#stack">Stack</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="assets/Raghav_Kumar_Jha_CV.pdf" class="topbar-cta" download>Resume ↓</a>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Product Manager — Hyderabad, India</p>
+        <h1 class="hero-title">I ship the<br>pipeline,<br><span class="accent">not the deck.</span></h1>
+        <p class="hero-sub">Manager, Analytics &amp; AI at Heritage Foods (₹3,500+ Cr FMCG). I've taken 7+ AI and data products from a blank requirements doc to production — architecture, agents, and adoption included.</p>
+        <div class="hero-actions">
+          <a href="#log" class="btn btn-primary">Read the case log</a>
+          <a href="mailto:shyaamkumarjha@gmail.com" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-diagram" aria-hidden="true">
+        <svg viewBox="0 0 380 380" id="pipelineSvg">
+          <!-- edges drawn by JS-friendly static paths -->
+          <g class="edges">
+            <path class="edge" d="M70,70 L190,70" />
+            <path class="edge" d="M190,70 L190,190" />
+            <path class="edge" d="M190,190 L70,190" />
+            <path class="edge" d="M190,190 L310,190" />
+            <path class="edge" d="M190,70 L310,70" />
+            <path class="edge" d="M70,190 L70,310" />
+            <path class="edge" d="M310,190 L310,310" />
+            <path class="edge" d="M70,310 L190,310" />
+            <path class="edge" d="M190,310 L310,310" />
+          </g>
+          <g class="nodes">
+            <g class="node" data-label="ingest" transform="translate(70,70)"><circle r="9"/></g>
+            <g class="node node-core" data-label="route" transform="translate(190,70)"><circle r="11"/></g>
+            <g class="node" data-label="validate" transform="translate(310,70)"><circle r="9"/></g>
+            <g class="node node-core" data-label="process" transform="translate(190,190)"><circle r="13"/></g>
+            <g class="node" data-label="enrich" transform="translate(70,190)"><circle r="9"/></g>
+            <g class="node" data-label="forecast" transform="translate(310,190)"><circle r="9"/></g>
+            <g class="node" data-label="verify" transform="translate(70,310)"><circle r="9"/></g>
+            <g class="node node-core" data-label="ship" transform="translate(190,310)"><circle r="11"/></g>
+            <g class="node" data-label="adopt" transform="translate(310,310)"><circle r="9"/></g>
+          </g>
+        </svg>
+        <p class="diagram-caption">A simplified read of the PO automation pipeline — five agents, one outcome.</p>
+      </div>
+    </div>
+
+    <div class="hero-metrics">
+      <div class="metric"><span class="metric-num">7+</span><span class="metric-label">products shipped end‑to‑end</span></div>
+      <div class="metric"><span class="metric-num">₹6.6 Cr</span><span class="metric-label">daily revenue under dashboards I built</span></div>
+      <div class="metric"><span class="metric-num">1,80,000+</span><span class="metric-label">stores mapped by one platform</span></div>
+      <div class="metric"><span class="metric-num">95%</span><span class="metric-label">accuracy, AI invoice parser</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== CASE LOG ===================== -->
+  <section class="log" id="log">
+    <div class="section-head">
+      <p class="eyebrow">Selected work</p>
+      <h2>The case log</h2>
+      <p class="section-sub">Four entries, pulled from seven-plus shipped. Each one is a real production system, not a prototype.</p>
+    </div>
+
+    <!-- ENTRY 01 -->
+    <article class="entry" id="entry-po">
+      <div class="entry-meta">
+        <span class="entry-id">LOG / 01</span>
+        <span class="entry-tag">Multi-agent automation</span>
+      </div>
+      <h3 class="entry-title">PO Automation Engine</h3>
+      <p class="entry-dek">A 5-agent pipeline that turns a vendor email into a verified delivery — no human re-typing in between.</p>
+
+      <div class="entry-body">
+        <div class="entry-readout">
+          <div class="readout-row"><span>Problem</span><p>50–60 modern retail chains — Zepto, Blinkit, Reliance, D-Mart — sent purchase orders by email across 400+ delivery centers. Every PO was manually read, validated, and keyed in, for days at a time, with entry errors baked into the process.</p></div>
+          <div class="readout-row"><span>What I built</span><p>Architected and shipped a 5-agent AI pipeline: ingestion reads the inbound email, a validation agent checks it against contract terms, an order-creation agent generates the order, a scheduling agent slots delivery, and a GRN agent verifies goods received — each a discrete, auditable step rather than one opaque model call.</p></div>
+          <div class="readout-row"><span>My role</span><p>Owned requirements, agent-boundary design, and stakeholder sign-off across Sales, Supply Chain, and Finance. Worked with engineering on pipeline architecture and failure handling for edge-case POs.</p></div>
+          <div class="readout-row"><span>Result</span><p>Processing time fell from days to minutes. Manual entry errors were eliminated at the point they used to happen — entry itself.</p></div>
+        </div>
+        <div class="entry-stat">
+          <span class="stat-num">Days → Minutes</span>
+          <span class="stat-label">PO processing time, 400+ delivery centers</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTRY 02 -->
+    <article class="entry" id="entry-samarth">
+      <div class="entry-meta">
+        <span class="entry-id">LOG / 02</span>
+        <span class="entry-tag">Enterprise analytics</span>
+      </div>
+      <h3 class="entry-title">Heritage Samarth &amp; Prism</h3>
+      <p class="entry-dek">Self-serve analytics for two very different audiences: a Branch Manager checking today's numbers, and a data team chasing farmer-level churn.</p>
+
+      <div class="entry-body">
+        <div class="entry-readout">
+          <div class="readout-row"><span>Problem</span><p>Sales performance and collection-center health lived in disconnected reports. Leadership from Branch Manager to CEO needed real-time, role-appropriate visibility without waiting on an analyst.</p></div>
+          <div class="readout-row"><span>What I built</span><p>Samarth: a role-based analytics platform tracking real-time sales KPIs and SE performance with region drill-downs, governing ₹6.6 Cr in daily revenue visibility. Prism: applies RFM segmentation across 150+ collection centers, processing 10+ crore farmer-level rows to surface churn risk before it becomes a problem.</p></div>
+          <div class="readout-row"><span>My role</span><p>Defined the KPI taxonomy and role-based access model, prioritized the RFM segmentation approach with the data science team, and drove adoption across branch-to-CEO user tiers.</p></div>
+          <div class="readout-row"><span>Result</span><p>Self-serve visibility replaced manual reporting for revenue tracking and churn risk — the explicit pattern Flipkart's own JD describes wanting more of.</p></div>
+        </div>
+        <div class="entry-stat">
+          <span class="stat-num">10+ Cr rows</span>
+          <span class="stat-label">farmer-level data, segmented for churn risk</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTRY 03 -->
+    <article class="entry" id="entry-geo">
+      <div class="entry-meta">
+        <span class="entry-id">LOG / 03</span>
+        <span class="entry-tag">Geospatial / ML</span>
+      </div>
+      <h3 class="entry-title">Geospatial Territory Redesign</h3>
+      <p class="entry-dek">Clustering 900+ field agents across six states to find the milk volume nobody was capturing.</p>
+
+      <div class="entry-body">
+        <div class="entry-readout">
+          <div class="readout-row"><span>Problem</span><p>Distributor placement had grown organically over years. Nobody could say with confidence which retail clusters were under-penetrated versus simply under-served by territory design.</p></div>
+          <div class="readout-row"><span>What I built</span><p>Applied KNN and DBSCAN clustering across field-agent and retail-coverage data spanning 900+ agents in six states to algorithmically surface under-penetrated clusters, then used that analysis to recommend new distributor placements.</p></div>
+          <div class="readout-row"><span>My role</span><p>Framed the business question as a clustering problem, ran the analysis, and presented the data-backed case to regional leadership — the part that actually decides whether a model becomes a decision.</p></div>
+          <div class="readout-row"><span>Result</span><p>16,000 litres per day in incremental milk sales unlocked through new distributor placement, backed by a model leadership could see and question.</p></div>
+        </div>
+        <div class="entry-stat">
+          <span class="stat-num">16,000 L/day</span>
+          <span class="stat-label">incremental sales from re-territorying</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTRY 04 -->
+    <article class="entry" id="entry-purity">
+      <div class="entry-meta">
+        <span class="entry-id">LOG / 04</span>
+        <span class="entry-tag">Consumer-facing trust</span>
+      </div>
+      <h3 class="entry-title">Purity Ka Report Card</h3>
+      <p class="entry-dek">A QR code on a milk packet that lets any consumer look up the actual quality batch behind it.</p>
+
+      <div class="entry-body">
+        <div class="entry-readout">
+          <div class="readout-row"><span>Problem</span><p>Milk quality testing happened, but it was invisible to the end consumer — a trust gap with no product behind it.</p></div>
+          <div class="readout-row"><span>What I built</span><p>Conceived and delivered the platform end-to-end: an internal QA batch-entry portal, a public batch-code lookup site with PDF download, and QR code integration directly on packaging connecting the two.</p></div>
+          <div class="readout-row"><span>My role</span><p>Owned the product end-to-end — from the original concept through QA workflow design, public-facing UX, and the packaging integration handoff with operations.</p></div>
+          <div class="readout-row"><span>Result</span><p>Scaled to thousands of monthly lookups, with measurable consumer trust signals tracked directly by the brand team.</p></div>
+        </div>
+        <div class="entry-stat">
+          <span class="stat-num">1000s/mo</span>
+          <span class="stat-label">consumer batch lookups</span>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ===================== MORE SHIPPED (compact strip) ===================== -->
+  <section class="strip">
+    <p class="strip-label">Also shipped</p>
+    <div class="strip-grid">
+      <div class="strip-item"><h4>Vendor Onboarding Portal</h4><p>7-step approval workflow across PAN, Aadhaar, MSME, GST APIs. 4–6 weeks → under 48 hours, 200+ vendors/year.</p></div>
+      <div class="strip-item"><h4>Retail Survey &amp; Mapping</h4><p>Full retail census tool, shipped in under a month. 1,80,000+ stores, geofencing, S3 image capture, volume scoring.</p></div>
+      <div class="strip-item"><h4>Compliance Training Portal</h4><p>LLM-powered training with AI-generated quizzes and auto-summaries. 65% completion, 80% voluntary certificate sharing.</p></div>
+      <div class="strip-item"><h4>AI Invoice Parser</h4><p>Unstructured PO/non-PO formats → SAP-compatible output at 95% accuracy. 40+ hours/month saved for Finance.</p></div>
+    </div>
+  </section>
+
+  <!-- ===================== STACK ===================== -->
+  <section class="stack-section" id="stack">
+    <div class="section-head">
+      <p class="eyebrow">Tools of record</p>
+      <h2>What's under the hood</h2>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-col">
+        <h4>AI &amp; Product</h4>
+        <ul><li>LLMs · RAG · LangChain</li><li>Multi-agent systems</li><li>PRDs · OKRs · Roadmaps</li><li>A/B testing · Funnel analysis</li></ul>
+      </div>
+      <div class="stack-col">
+        <h4>Data &amp; ML</h4>
+        <ul><li>SQL · Python · Pandas</li><li>Scikit-learn · NLP</li><li>Holt-Winters forecasting</li><li>KNN · DBSCAN · RFM</li></ul>
+      </div>
+      <div class="stack-col">
+        <h4>Engineering</h4>
+        <ul><li>Flask · Django · React.js</li><li>REST APIs · AWS (S3, EC2)</li><li>SAP S/4HANA · Anaplan</li><li>Power BI · Tableau · Git</li></ul>
+      </div>
+      <div class="stack-col">
+        <h4>This site</h4>
+        <ul><li>Hand-coded HTML/CSS/JS</li><li>No framework, no build step</li><li>Deployed on Vercel</li><li><a href="https://github.com/" target="_blank" rel="noopener" id="repoLink">View source →</a></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">About</p>
+        <h2>MBA, but I still read the stack trace.</h2>
+        <p>I'm Raghav — currently Manager, Analytics &amp; AI at Heritage Foods, a ₹3,500+ Cr FMCG business, where I own AI and data products end-to-end: requirements, architecture, stakeholder alignment, and the part that actually ships.</p>
+        <p>Before the MBA at IIM Nagpur, I was a full-stack developer shipping production apps in Python, Django, and React. That's the part most AI PMs skip — I didn't, and it's why I can sit in an architecture review and a CEO readout in the same week and be useful in both.</p>
+        <p>I built this site myself for the same reason I build everything myself first: I'd rather show the working pipeline than describe it.</p>
+      </div>
+      <div class="about-facts">
+        <div class="fact"><span>MBA</span><p>IIM Nagpur, 2023–25</p></div>
+        <div class="fact"><span>B.Tech CSE</span><p>G.B. Pant Govt. Engineering College, 2018–22</p></div>
+        <div class="fact"><span>Based in</span><p>Hyderabad, India</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <h2>Let's talk pipelines.</h2>
+    <p>Open to Senior PM roles in AI-first data products.</p>
+    <div class="contact-links">
+      <a href="mailto:shyaamkumarjha@gmail.com">shyaamkumarjha@gmail.com</a>
+      <a href="https://linkedin.com/in/raghav-kumar-jha" target="_blank" rel="noopener">linkedin.com/in/raghav-kumar-jha</a>
+      <a href="tel:+919069026985">+91-90690-26985</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Built with HTML, CSS &amp; JS by Raghav Kumar Jha — deployed on Vercel. <a href="https://github.com/" target="_blank" rel="noopener" id="repoLinkFooter">View source on GitHub →</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
