@@ -275,7 +275,7 @@ p { margin: 0; }
   font-size: clamp(42px, 6vw, 72px);
   font-weight: 300;
   letter-spacing: -0.03em;
-  line-height: 1.06;
+  line-height:1.02;
   color: var(--text);
 }
 .hero-title strong {
@@ -344,7 +344,6 @@ p { margin: 0; }
   border-radius: 10px;
   overflow: hidden;
   margin-top: 12px;
-  opacity: 0.92;
 }
 
 .hp-header {
@@ -512,19 +511,85 @@ p { margin: 0; }
   margin-bottom: 10px;
 }
 .case-dek {
-  font-size: 15px;
-  color: var(--text-2);
-  max-width: 580px;
-  line-height: 1.75;
+  font-size: 16px;
+  color: var(--text);
+  max-width: 600px;
+  line-height: 1.7;
   margin-bottom: 40px;
+}
+
+/* discovery block - distinct from .rr readout grid, sits before the diagram */
+.discovery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: 40px;
+  border-left: 2px solid var(--gold-dim);
+  border-radius: 0 6px 6px 0;
+  overflow: hidden;
+  background: var(--gold-tint);
+}
+.discovery-half {
+  padding: 18px 22px;
+}
+.discovery-half + .discovery-half {
+  border-left: 1px solid var(--b1);
+}
+.discovery-k {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  display: block;
+  margin-bottom: 8px;
+}
+.discovery-v {
+  font-size: 13.5px;
+  color: var(--text);
+  opacity: 0.88;
+  line-height: 1.65;
+}
+.discovery-v.insight {
+  font-style: normal;
+  color: var(--text);
+  opacity: 0.95;
+}
+.discovery-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.discovery-list li {
+  font-size: 13.5px;
+  color: var(--text);
+  opacity: 0.88;
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+.discovery-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px;
+  width: 5px; height: 1px;
+  background: var(--gold-dim);
+}
+
+@media (max-width: 700px) {
+  .discovery { grid-template-columns: 1fr; }
+  .discovery-half + .discovery-half { border-left: none; border-top: 1px solid var(--b1); }
 }
 
 /* architecture diagram container */
 .arch {
-  background: var(--bg-2);
-  border: 1px solid var(--b2);
+  background: var(--bg-1);
+  border: 1px solid var(--b1);
   border-radius: 8px;
-  padding: 24px;
+  padding: 22px 24px;
   margin-bottom: 44px;
   overflow-x: auto;
   -ms-overflow-style: none;
@@ -598,7 +663,8 @@ p { margin: 0; }
 }
 .rr-v {
   font-size: 14.5px;
-  color: var(--text-2);
+  color: var(--text);
+  opacity: 0.88;
   line-height: 1.75;
 }
 
@@ -621,9 +687,32 @@ p { margin: 0; }
 }
 .kpi-l {
   font-size: 12.5px;
-  color: var(--text-3);
+  color: var(--text-2);
   line-height: 1.55;
   margin-top: 4px;
+}
+.kpi-scale {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--b1);
+}
+.kpi-scale li {
+  font-size: 11.5px;
+  color: var(--text-3);
+  line-height: 1.5;
+  list-style: none;
+  padding-left: 11px;
+  position: relative;
+}
+.kpi-scale li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px;
+  width: 4px; height: 1px;
+  background: var(--gold-dim);
 }
 
 @media (max-width: 740px) {
@@ -720,7 +809,7 @@ p { margin: 0; }
   margin: 0 auto;
   padding: 0 var(--pad);
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap: 40px;
 }
 .stack-col h4 {
@@ -773,6 +862,45 @@ p { margin: 0; }
 .about-copy p:last-child { margin-bottom: 0; }
 
 .about-aside { display: flex; flex-direction: column; gap: 0; padding-top: 4px; }
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 8px;
+  border: 1px solid var(--b2);
+  background: var(--bg-2);
+  margin-bottom: 28px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.about-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-3);
+}
+.about-photo-placeholder svg {
+  width: 28px; height: 28px;
+  stroke: var(--gold-dim);
+  fill: none;
+  stroke-width: 1.3;
+  opacity: 0.7;
+}
+.about-photo-placeholder span {
+  font-family: var(--font-display);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
 .af {
   padding: 14px 0;
   border-bottom: 1px solid var(--b1);
