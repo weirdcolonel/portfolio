@@ -57,13 +57,20 @@
 </h1>
         <div class="hero-rule"></div>
         <p class="hero-sub">
-          Currently building AI products at Heritage Foods.
-          Full-stack engineering background - I own discovery, 
-          product requirements, stakeholder alignment, 
-          and delivery - from problem definition to production.
+          I build AI products that solve operational problems at enterprise scale.
+          From discovery and stakeholder alignment to launch, I own the journey
+          from problem to production. My engineering background lets me challenge
+          technical decisions without losing sight of customer and business outcomes.
         </p>
+        <div class="hero-position">
+          <span class="hp-pill">Enterprise Problems</span>
+          <span class="hp-plus">→</span>
+          <span class="hp-pill">AI Products</span>
+          <span class="hp-eq">→</span>
+          <span class="hp-pill hp-pill-gold">Business Outcomes</span>
+        </div>
         <div class="hero-actions">
-          <a href="#cases" class="btn btn-primary">See the work</a>
+          <a href="#cases" class="btn btn-primary">Explore Projects</a>
           <a href="mailto:shyaamkumarjha@gmail.com" class="btn btn-ghost">Get in touch</a>
         </div>
       </div>
@@ -99,8 +106,36 @@
 <section class="cases" id="cases">
   <div class="cases-head reveal">
     <span class="sec-eyebrow">Selected work</span>
-    <h2 class="sec-title">Four systems. All in production.</h2>
-    <p class="sec-sub">Each started as a blank requirements doc and ended as something real people rely on daily.</p>
+    <h2 class="sec-title">Five systems. All in production.</h2>
+    <p class="sec-sub">Each started as a blank requirements doc and ended as something real people rely on daily. Jump to any one - no need to read in order.</p>
+  </div>
+
+  <div class="case-jump reveal">
+    <a href="#case-po" class="cj-card">
+      <span class="cj-idx">01</span>
+      <span class="cj-title">PO Automation Engine</span>
+      <span class="cj-outcome">Days → minutes, 50–60 retail chains</span>
+    </a>
+    <a href="#case-samarth" class="cj-card">
+      <span class="cj-idx">02</span>
+      <span class="cj-title">Heritage Samarth</span>
+      <span class="cj-outcome">One agreed revenue number, org-wide</span>
+    </a>
+    <a href="#case-prism" class="cj-card">
+      <span class="cj-idx">03</span>
+      <span class="cj-title">Heritage Prism</span>
+      <span class="cj-outcome">150+ centres, weekly churn triage</span>
+    </a>
+    <a href="#case-geo" class="cj-card">
+      <span class="cj-idx">04</span>
+      <span class="cj-title">Territory Redesign</span>
+      <span class="cj-outcome">+16,000 L/day incremental milk</span>
+    </a>
+    <a href="#case-purity" class="cj-card">
+      <span class="cj-idx">05</span>
+      <span class="cj-title">Purity Ka Report Card</span>
+      <span class="cj-outcome">1,000s/mo consumer trust lookups</span>
+    </a>
   </div>
 
   <!-- ── CASE 01 ── -->
@@ -127,6 +162,26 @@
       </div>
     </div>
 
+    <div class="case-body">
+      <div class="readout">
+        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">50–60 retail chains (Zepto, Blinkit, Reliance, D-Mart) sent POs by email across 400+ delivery centres - each one manually read, validated against contracts, and keyed into SAP. The process took days during peak periods.</p></div>
+        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Defined the product workflow, aligned Sales, Supply Chain, and Finance on where automation could be trusted, and translated that agreement into five independently verifiable stages - ingestion, validation, order creation, scheduling, GRN verification.</p></div>
+        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Discrete agents over one end-to-end model. POs touch financial records, so a failed stage gets retried in isolation - not by reprocessing the whole order.</p></div>
+        <div class="rr"><span class="rr-k">Lesson</span><p class="rr-v">The MVP relies on predefined mappings for known formats. V2 feeds exception resolutions back in, so the system adapts instead of staying rule-dependent.</p></div>
+      </div>
+      <div class="case-kpi">
+        <div class="kpi-n">Days → Minutes</div>
+        <p class="kpi-l">PO processing time, cut at the source</p>
+        <ul class="kpi-scale">
+          <li>50–60 retail chains</li>
+          <li>400+ delivery centres</li>
+          <li>5 agents, one pipeline</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="arch-toggle">
+      <summary class="arch-summary">Technical implementation <span class="arch-summary-sub">— multi-agent orchestration, for technical readers</span></summary>
     <div class="arch">
       <div class="arch-eyebrow">System architecture - PO Automation Engine</div>
       <svg class="arch-svg" viewBox="0 0 780 196" xmlns="http://www.w3.org/2000/svg">
@@ -200,23 +255,8 @@
       </svg>
     </div>
 
-    <div class="case-body">
-      <div class="readout">
-        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">50–60 retail chains (Zepto, Blinkit, Reliance, D-Mart) sent POs by email across 400+ delivery centres - each one manually read, validated against contracts, and keyed into SAP. The process took days during peak periods.</p></div>
-        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Defined the product workflow, aligned Sales, Supply Chain, and Finance on where automation could be trusted, and translated that agreement into five independently verifiable stages - ingestion, validation, order creation, scheduling, GRN verification.</p></div>
-        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Discrete agents over one end-to-end model. POs touch financial records, so a failed stage gets retried in isolation - not by reprocessing the whole order.</p></div>
-        <div class="rr"><span class="rr-k">Lesson</span><p class="rr-v">The MVP relies on predefined mappings for known formats. V2 feeds exception resolutions back in, so the system adapts instead of staying rule-dependent.</p></div>
-      </div>
-      <div class="case-kpi">
-        <div class="kpi-n">Days → Minutes</div>
-        <p class="kpi-l">PO processing time, cut at the source</p>
-        <ul class="kpi-scale">
-          <li>50–60 retail chains</li>
-          <li>400+ delivery centres</li>
-          <li>5 agents, one pipeline</li>
-        </ul>
-      </div>
-    </div>
+    </details>
+
   </article>
 
   <!-- ── CASE 02 ── -->
@@ -225,8 +265,8 @@
       <span class="case-idx">02 /</span>
       <span class="case-tag">Enterprise analytics</span>
     </div>
-    <h3 class="case-title">Heritage Samarth &amp; Prism</h3>
-    <p class="case-dek">Self-serve analytics for two audiences with nothing in common: a Branch Manager checking today's revenue, and a data team surfacing farmer-level churn before it costs the business milk volume.</p>
+    <h3 class="case-title">Heritage Samarth</h3>
+    <p class="case-dek">A self-serve revenue dashboard, scoped by role, so a Branch Manager, a Regional Head, and the CEO finally look at the same number when they say "yesterday's revenue."</p>
 
     <div class="discovery">
       <div class="discovery-half">
@@ -234,7 +274,7 @@
         <ul class="discovery-list">
           <li>Compared MIS reports sent to BMs, Regional Managers, Zonal Heads, and the CEO</li>
           <li>Found "yesterday's revenue" meant a different number to each of them</li>
-          <li>Procurement was tracking farmer churn risk manually, in spreadsheets, too late to act</li>
+          <li>Every team had its own analyst manually reconciling numbers before a meeting</li>
         </ul>
       </div>
       <div class="discovery-half">
@@ -243,108 +283,90 @@
       </div>
     </div>
 
-    <div class="arch">
-      <div class="arch-eyebrow">System architecture - Samarth + Prism</div>
-      <svg class="arch-svg" viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="a2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-            <polygon points="0 0, 7 3.5, 0 7" fill="#635E57" opacity="0.6"/>
-          </marker>
-          <marker id="a2h" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-            <polygon points="0 0, 7 3.5, 0 7" fill="#8A7250"/>
-          </marker>
-        </defs>
-
-        <!-- zone labels -->
-        <text x="62" y="13" class="ls" text-anchor="middle">SOURCES</text>
-        <text x="230" y="13" class="ls" text-anchor="middle">PROCESSING</text>
-        <text x="430" y="13" class="ls" text-anchor="middle">ACCESS</text>
-        <text x="660" y="13" class="ls" text-anchor="middle">CONSUMERS</text>
-
-        <!-- zones -->
-        <rect x="10" y="18" width="104" height="164" rx="5" class="zone"/>
-        <rect x="128" y="18" width="200" height="164" rx="5" class="zone"/>
-        <rect x="342" y="18" width="170" height="164" rx="5" class="zone"/>
-        <rect x="526" y="18" width="244" height="164" rx="5" class="zone"/>
-
-        <!-- sources -->
-        <rect x="20" y="38" width="84" height="34" rx="4" class="n"/>
-        <text x="62" y="59" class="lb" text-anchor="middle">SAP S/4HANA</text>
-        <rect x="20" y="82" width="84" height="34" rx="4" class="n"/>
-        <text x="62" y="103" class="lb" text-anchor="middle">Field data</text>
-        <rect x="20" y="126" width="84" height="34" rx="4" class="n"/>
-        <text x="62" y="147" class="lb" text-anchor="middle">Farmer rows</text>
-
-        <!-- samarth pipeline -->
-        <rect x="138" y="34" width="100" height="38" rx="4" class="n"/>
-        <text x="188" y="51" class="lb" text-anchor="middle">KPI pipeline</text>
-        <text x="188" y="65" class="ls" text-anchor="middle">real-time refresh</text>
-
-        <!-- prism pipeline -->
-        <rect x="138" y="84" width="100" height="38" rx="4" class="nh"/>
-        <text x="188" y="99" class="lh" text-anchor="middle">RFM model</text>
-        <text x="188" y="112" class="lsg" text-anchor="middle">recency · frequency · value</text>
-
-        <!-- churn seg -->
-        <rect x="252" y="118" width="76" height="34" rx="4" class="n"/>
-        <text x="290" y="136" class="lb" text-anchor="middle">Churn segs</text>
-        <text x="290" y="149" class="ls" text-anchor="middle">150+ centres</text>
-
-        <!-- access layer -->
-        <rect x="352" y="34" width="150" height="38" rx="4" class="n"/>
-        <text x="427" y="55" class="lb" text-anchor="middle">Role-based views</text>
-        <text x="427" y="69" class="ls" text-anchor="middle">Branch → CEO</text>
-
-        <rect x="352" y="88" width="150" height="66" rx="4" class="n"/>
-        <text x="427" y="109" class="lb" text-anchor="middle">Segment access</text>
-        <text x="427" y="124" class="ls" text-anchor="middle">data team · procurement</text>
-        <text x="427" y="138" class="ls" text-anchor="middle">churn risk surface</text>
-
-        <!-- consumers -->
-        <rect x="536" y="30" width="224" height="46" rx="4" class="nl"/>
-        <text x="648" y="52" class="lb" text-anchor="middle">Samarth - ₹6.6 Cr daily revenue</text>
-        <text x="648" y="67" class="ls" text-anchor="middle">BM · Regional Head · CEO</text>
-
-        <rect x="536" y="90" width="224" height="62" rx="4" class="nl"/>
-        <text x="648" y="112" class="lb" text-anchor="middle">Prism - churn risk prioritisation</text>
-        <text x="648" y="127" class="ls" text-anchor="middle">Procurement team</text>
-        <text x="648" y="142" class="ls" text-anchor="middle">Field intervention planning</text>
-
-        <!-- arrows -->
-        <line x1="104" y1="55" x2="135" y2="53" class="edge" marker-end="url(#a2)"/>
-        <line x1="104" y1="99" x2="135" y2="103" class="edge" marker-end="url(#a2)"/>
-        <line x1="104" y1="143" x2="135" y2="120" class="edge" marker-end="url(#a2)"/>
-        <line x1="238" y1="53" x2="350" y2="53" class="edge" marker-end="url(#a2)"/>
-        <line x1="238" y1="103" x2="250" y2="121" class="edge" marker-end="url(#a2)"/>
-        <line x1="328" y1="135" x2="350" y2="121" class="edgeh" marker-end="url(#a2h)"/>
-        <line x1="502" y1="53" x2="533" y2="53" class="edge" marker-end="url(#a2)"/>
-        <line x1="502" y1="121" x2="533" y2="121" class="edgeh" marker-end="url(#a2h)"/>
-      </svg>
-    </div>
-
     <div class="case-body">
       <div class="readout">
-        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Sales performance and collection-centre health lived in disconnected reports, each with its own assumptions. Leadership from Branch Manager to CEO needed one trusted, role-appropriate view - without waiting on an analyst to reconcile numbers first.</p></div>
-        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Audited how every team's MIS actually calculated its numbers, then ran alignment sessions with Sales and Procurement to agree on one definition per metric - documented and enforced across systems, even where the underlying data still came from different sources. Samarth then gives every level of leadership the same ₹6.6 Cr/day revenue picture, scoped to their role. Prism gives procurement an early warning on farmer churn, ranked across 150+ collection centres.</p></div>
-        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Chose RFM over a heavier ML churn model - the business needed interpretable segments stakeholders would actually trust and act on, not just accurate ones.</p></div>
-        <div class="rr"><span class="rr-k">What surprised us</span><p class="rr-v">Getting three teams to agree on one number took more negotiation than any model build. Once they did, adoption was immediate - nobody had to "double-check" a number that came from one governed definition.</p></div>
+        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Sales performance lived in disconnected reports, each with its own assumptions. Leadership from Branch Manager to CEO needed one trusted, role-appropriate view - without waiting on an analyst to reconcile numbers first.</p></div>
+        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Audited how every team's MIS actually calculated its numbers, then ran alignment sessions with Sales to agree on one definition per metric - documented and enforced across systems, even where the underlying data still came from different sources. Samarth gives every level of leadership the same ₹6.6 Cr/day revenue picture, scoped to their role.</p></div>
+        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">One governed metric definition over letting each team keep its own calculation logic. Slower to roll out - every team had to give something up - but it killed the "whose number is right" debate for good.</p></div>
+        <div class="rr"><span class="rr-k">What surprised us</span><p class="rr-v">Getting four leadership levels to agree on one number took more negotiation than any model build. Once they did, adoption was immediate - nobody had to "double-check" a number that came from one governed definition.</p></div>
       </div>
       <div class="case-kpi">
         <div class="kpi-n">One number</div>
         <p class="kpi-l">Replacing reports that disagreed</p>
         <ul class="kpi-scale">
           <li>₹6.6 Cr/day, one figure, every role</li>
-          <li>150+ collection centres</li>
           <li>4 leadership levels aligned</li>
+          <li>Zero manual reconciliation</li>
         </ul>
       </div>
     </div>
+
+    <details class="arch-toggle">
+      <summary class="arch-summary">View alignment artifact <span class="arch-summary-sub">— wireframe used to validate hierarchy with stakeholders</span></summary>
+      <div class="wireframe-note">
+        <p>Before any visual design started, I used this to walk Zonal Heads and Branch Managers through the information hierarchy and pressure-test it - what should a manager see first, what's a real decision point vs. a nice-to-have number. The sticky notes are real review notes from that session, kept on the artifact so the tradeoffs stay visible.</p>
+      </div>
+      <img src="assets/samarth-wireframe.svg" alt="Lo-fi wireframe of the Samarth branch manager dashboard with stakeholder review notes on information hierarchy" class="wireframe-img">
+    </details>
+
   </article>
 
   <!-- ── CASE 03 ── -->
-  <article class="case reveal" id="case-geo">
+  <article class="case reveal" id="case-prism">
     <div class="case-meta">
       <span class="case-idx">03 /</span>
+      <span class="case-tag">Procurement · Predictive</span>
+    </div>
+    <h3 class="case-title">Heritage Prism</h3>
+    <p class="case-dek">A weekly scorecard that tells procurement which collection centres and farmers need intervention before churn costs the business milk volume - built on the same governed data layer as Samarth.</p>
+
+    <div class="discovery">
+      <div class="discovery-half">
+        <span class="discovery-k">Discovery</span>
+        <ul class="discovery-list">
+          <li>Procurement was tracking farmer churn risk manually, in spreadsheets, too late to act</li>
+          <li>V1 shipped as a flat KPI list - CXOs read top to bottom, not by theme, and missed what needed action</li>
+          <li>A red/green rule on "cost per fat kg" flagged a genuinely good outcome as a problem</li>
+        </ul>
+      </div>
+      <div class="discovery-half">
+        <span class="discovery-k">Key insight</span>
+        <p class="discovery-v insight">A flat KPI list told procurement what changed, not what to do about it. The fix wasn't a better chart - it was grouping by how procurement actually thinks: collection health → farmer health → who to intervene with.</p>
+      </div>
+    </div>
+
+    <div class="case-body">
+      <div class="readout">
+        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Farmer and HPC churn risk was tracked manually in spreadsheets and surfaced too late for the field team to act. The first dashboard attempt listed every metric flat, with no signal for where to look first.</p></div>
+        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">An RFM-based churn model ranking risk across 150+ collection centres, presented as a three-stage triage funnel - collection health, farmer health, intervene - instead of a KPI wall. Default view stays All India; zone is a drill-down, not the starting point, so procurement sees where to act before where to look.</p></div>
+        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Chose RFM over a heavier ML churn model - the business needed interpretable segments stakeholders would actually trust and act on, not just accurate ones.</p></div>
+        <div class="rr"><span class="rr-k">What I'd reconsider</span><p class="rr-v">A flat red/green rule doesn't capture direction correctly everywhere - cost-up was sometimes a good outcome (driven by higher fat content), and "farmers per HPC" dropping could mean better service density, not attrition. V2 needs metric-specific direction logic, not one global rule.</p></div>
+      </div>
+      <div class="case-kpi">
+        <div class="kpi-n">150+ centres</div>
+        <p class="kpi-l">Churn risk, ranked weekly</p>
+        <ul class="kpi-scale">
+          <li>RFM segmentation model</li>
+          <li>3-stage triage funnel</li>
+          <li>Weekly procurement review cycle</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="arch-toggle">
+      <summary class="arch-summary">View alignment artifact <span class="arch-summary-sub">— wireframe used to validate metric grouping with stakeholders</span></summary>
+      <div class="wireframe-note">
+        <p>Same exercise as Samarth, different problem: this version tests whether grouping metrics into a "collection health → farmer health → intervene" funnel reads correctly to a CXO who skims top to bottom. The sticky notes flag two real ambiguities the review surfaced - a flat red/green rule that hid a good outcome, and a metric where "lower" wasn't obviously bad.</p>
+      </div>
+      <img src="assets/prism-wireframe.svg" alt="Lo-fi wireframe of the Prism procurement scorecard with stakeholder review notes on metric grouping and color logic" class="wireframe-img">
+    </details>
+
+  </article>
+
+  <!-- ── CASE 04 ── -->
+  <article class="case reveal" id="case-geo">
+    <div class="case-meta">
+      <span class="case-idx">04 /</span>
       <span class="case-tag">Geospatial · ML</span>
     </div>
     <h3 class="case-title">Geospatial Territory Redesign</h3>
@@ -365,6 +387,26 @@
       </div>
     </div>
 
+    <div class="case-body">
+      <div class="readout">
+        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Distributor placement had grown organically over years. No one could confidently tell under-penetrated clusters apart from clusters that were simply under-served by territory design.</p></div>
+        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Turned an unanswerable sales question into a model leadership could act on - clustering field-agent and retail-coverage data across six states to surface real gaps, then building the revenue-backed case that took it from a chart to an approved distributor rollout.</p></div>
+        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Chose DBSCAN over fixed-radius clustering - retailers don't cluster in neat circles, and density-based clusters reflected real market behaviour while filtering outliers.</p></div>
+        <div class="rr"><span class="rr-k">What I'd build next</span><p class="rr-v">Accurate clusters alone didn't drive adoption - leadership needed transparent reasoning and estimated impact before acting. Next: fold in distributor capacity, travel time, and serviceability constraints alongside geography.</p></div>
+      </div>
+      <div class="case-kpi">
+        <div class="kpi-n">+16,000 L/day</div>
+        <p class="kpi-l">Incremental milk sales unlocked</p>
+        <ul class="kpi-scale">
+          <li>900+ field agents clustered</li>
+          <li>6 states covered</li>
+          <li>1 approved distributor rollout</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="arch-toggle">
+      <summary class="arch-summary">Technical implementation <span class="arch-summary-sub">— data pipeline and clustering approach</span></summary>
     <div class="arch">
       <div class="arch-eyebrow">Analysis pipeline - territory clustering</div>
       <svg class="arch-svg" viewBox="0 0 780 220" xmlns="http://www.w3.org/2000/svg">
@@ -549,29 +591,14 @@
 </svg>
     </div>
 
-    <div class="case-body">
-      <div class="readout">
-        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Distributor placement had grown organically over years. No one could confidently tell under-penetrated clusters apart from clusters that were simply under-served by territory design.</p></div>
-        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Turned an unanswerable sales question into a model leadership could act on - clustering field-agent and retail-coverage data across six states to surface real gaps, then building the revenue-backed case that took it from a chart to an approved distributor rollout.</p></div>
-        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Chose DBSCAN over fixed-radius clustering - retailers don't cluster in neat circles, and density-based clusters reflected real market behaviour while filtering outliers.</p></div>
-        <div class="rr"><span class="rr-k">What I'd build next</span><p class="rr-v">Accurate clusters alone didn't drive adoption - leadership needed transparent reasoning and estimated impact before acting. Next: fold in distributor capacity, travel time, and serviceability constraints alongside geography.</p></div>
-      </div>
-      <div class="case-kpi">
-        <div class="kpi-n">+16,000 L/day</div>
-        <p class="kpi-l">Incremental milk sales unlocked</p>
-        <ul class="kpi-scale">
-          <li>900+ field agents clustered</li>
-          <li>6 states covered</li>
-          <li>1 approved distributor rollout</li>
-        </ul>
-      </div>
-    </div>
+    </details>
+
   </article>
 
   <!-- ── CASE 04 ── -->
   <article class="case reveal" id="case-purity">
     <div class="case-meta">
-      <span class="case-idx">04 /</span>
+      <span class="case-idx">05 /</span>
       <span class="case-tag">Consumer · Trust</span>
     </div>
     <h3 class="case-title">Purity Ka Report Card</h3>
@@ -592,6 +619,26 @@
       </div>
     </div>
 
+    <div class="case-body">
+      <div class="readout">
+        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Milk quality testing happened, but it was invisible to the end consumer - a trust gap with no product behind it.</p></div>
+        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Scoped this as a trust problem, not a tech problem, designed for the moment a consumer is deciding whether to buy: an internal QA batch-entry portal, a public lookup page, and a QR code on the packaging connecting the two - no app, no login.</p></div>
+        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Chose a QR-enabled public web page over an in-app feature - any smartphone camera could verify quality instantly, maximising accessibility at the point of purchase.</p></div>
+        <div class="rr"><span class="rr-k">Lesson</span><p class="rr-v">Transparency alone didn't build trust - context did. Consumers wanted plain explanations, not raw lab values. Next: pair batch reports with freshness indicators and product education.</p></div>
+      </div>
+      <div class="case-kpi">
+        <div class="kpi-n">1,000s/mo</div>
+        <p class="kpi-l">Consumer batch lookups, a new trust signal</p>
+        <ul class="kpi-scale">
+          <li>1 QR code, zero app installs</li>
+          <li>Every production batch covered</li>
+          <li>Live at the point of purchase</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="arch-toggle">
+      <summary class="arch-summary">Technical implementation <span class="arch-summary-sub">— end-to-end consumer flow, for technical readers</span></summary>
     <div class="arch">
       <div class="arch-eyebrow">System architecture - Purity Ka Report Card</div>
       <svg class="arch-svg" viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg">
@@ -666,23 +713,8 @@
       </svg>
     </div>
 
-    <div class="case-body">
-      <div class="readout">
-        <div class="rr"><span class="rr-k">Problem</span><p class="rr-v">Milk quality testing happened, but it was invisible to the end consumer - a trust gap with no product behind it.</p></div>
-        <div class="rr"><span class="rr-k">What I built</span><p class="rr-v">Scoped this as a trust problem, not a tech problem, designed for the moment a consumer is deciding whether to buy: an internal QA batch-entry portal, a public lookup page, and a QR code on the packaging connecting the two - no app, no login.</p></div>
-        <div class="rr"><span class="rr-k">Key tradeoff</span><p class="rr-v">Chose a QR-enabled public web page over an in-app feature - any smartphone camera could verify quality instantly, maximising accessibility at the point of purchase.</p></div>
-        <div class="rr"><span class="rr-k">Lesson</span><p class="rr-v">Transparency alone didn't build trust - context did. Consumers wanted plain explanations, not raw lab values. Next: pair batch reports with freshness indicators and product education.</p></div>
-      </div>
-      <div class="case-kpi">
-        <div class="kpi-n">1,000s/mo</div>
-        <p class="kpi-l">Consumer batch lookups, a new trust signal</p>
-        <ul class="kpi-scale">
-          <li>1 QR code, zero app installs</li>
-          <li>Every production batch covered</li>
-          <li>Live at the point of purchase</li>
-        </ul>
-      </div>
-    </div>
+    </details>
+
   </article>
 </section>
 
@@ -775,13 +807,12 @@
 </ul>
     </div>
     <div class="stack-col reveal">
-      <h3>Enterprise Platforms</h3>
+      <h3>Works Across</h3>
       <ul>
   <li>SAP S/4HANA · Anaplan</li>
-  <li>SQL · Python</li>
   <li>Power BI</li>
-  <li>AWS (S3, EC2)</li>
-  <li>REST APIs · Git</li>
+  <li>SQL · Python — reads code, ships specs</li>
+  <li>Engineering, Sales, Supply Chain, Finance</li>
 </ul>
     </div>
 
@@ -793,10 +824,10 @@
   <div class="about-inner">
     <div class="about-copy reveal">
       <span class="sec-eyebrow">About</span>
-      <h2>MBA who still reads the stack trace.</h2>
-      <p>I'm Raghav - Manager, Analytics &amp; AI at Heritage Foods, a ₹3,500+ Cr FMCG business. I own AI and data products end-to-end: requirements, architecture, stakeholder alignment, and the shipping.</p>
-      <p>My engineering background - full-stack development in Python, Django, and React before IIM Nagpur - helps me translate business problems into technical execution without losing sight of user outcomes.</p>
-      <p>I built this site myself, the same way I build everything: starting from the problem, not the template.</p>
+      <h2>Product manager first. Engineer when it helps.</h2>
+      <p>I'm Raghav - Manager, Analytics &amp; AI at Heritage Foods, a ₹3,500+ Cr FMCG business. I own AI and data products end-to-end: discovery, requirements, stakeholder alignment, and the call on what gets built.</p>
+      <p>Before IIM Nagpur, I spent two years as a full-stack engineer in Python, Django, and React. I don't write production code anymore - but it means I can read a system design, push back on an estimate, and sit in a sprint planning call as a peer, not a translator.</p>
+      <p>I built this site myself, the same way I build products: starting from the problem, not the template.</p>
     </div>
     <div class="about-aside reveal">
       <div class="about-photo">

@@ -1,0 +1,222 @@
+<svg viewBox="0 0 1040 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="stickyshadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <style>
+    .pg     { fill: #FAFAF9; }
+    .box    { fill: #FFFFFF; stroke: #1F1F1F; stroke-width: 1.5; }
+    .boxd   { fill: none; stroke: #BDBAB2; stroke-width: 1.3; stroke-dasharray: 3 3; }
+    .crit   { fill: #FFFFFF; stroke: #C0463D; stroke-width: 1.6; }
+    .ok     { fill: #FFFFFF; stroke: #2E7D52; stroke-width: 1.6; }
+    .navbox { fill: none; stroke: #CFCCC4; stroke-width: 1.2; stroke-dasharray: 2 3; }
+    .navcur { fill: #1F1F1F; }
+    .t8     { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8px; letter-spacing: 0.04em; fill: #8C887E; }
+    .t9     { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9px; fill: #2B2B28; }
+    .t9m    { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9px; fill: #8C887E; }
+    .t10b   { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; font-weight: 700; fill: #1F1F1F; }
+    .t11b   { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #1F1F1F; }
+    .num    { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #1F1F1F; }
+    .navw   { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9.5px; fill: #FFFFFF; }
+    .navg   { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9.5px; fill: #9A968C; }
+    .stick  { font-family: 'Segoe Print','Bradley Hand','Comic Sans MS', cursive; font-size: 9.5px; fill: #3A3220; }
+    .stickh { font-family: 'Segoe Print','Bradley Hand','Comic Sans MS', cursive; font-size: 10.5px; font-weight: 700; fill: #3A3220; }
+    .lbl    { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8px; letter-spacing: 0.06em; fill: #9A968C; }
+    .val    { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; fill: #1F1F1F; }
+    .grp    { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8.5px; font-weight: 700; letter-spacing: 0.05em; fill: #5C5850; }
+  </style>
+
+  <rect width="1040" height="800" class="pg"/>
+
+  <!-- ===== BRIEF BLOCK :: x24 y24 w488 h136 ===== -->
+  <rect x="24" y="24" width="488" height="136" class="box"/>
+  <text x="40" y="44" class="t11b" font-size="13">PRISM — Procurement Scorecard</text>
+
+  <text x="40" y="64" class="lbl">GOAL</text>
+  <text x="40" y="76" class="val">Tell the field team where to intervene before a farmer or HPC is lost</text>
+
+  <text x="40" y="92" class="lbl">PRIMARY USER</text>
+  <text x="172" y="92" class="val" font-size="9">Procurement / CXO</text>
+  <text x="300" y="92" class="lbl">FREQUENCY</text>
+  <text x="376" y="92" class="val" font-size="9">Weekly review cycle</text>
+
+  <text x="40" y="112" class="lbl">STATUS</text>
+  <text x="172" y="112" class="val" font-size="9">Stakeholder review — iteration 2</text>
+
+  <line x1="40" y1="126" x2="496" y2="126" class="navbox"/>
+  <text x="40" y="142" class="lbl">PURPOSE</text>
+  <text x="172" y="142" class="val" font-size="9">Validate metric grouping before visual design</text>
+
+  <!-- ===== MENTAL MODEL BLOCK :: x528 y24 w488 h136 ===== -->
+  <rect x="528" y="24" width="488" height="136" class="box"/>
+  <text x="544" y="44" class="t10b">How procurement thinks about this</text>
+
+  <g>
+    <rect x="544" y="64" width="138" height="32" class="boxd"/>
+    <text x="613" y="84" class="t9" text-anchor="middle">Collection health</text>
+    <text x="688" y="84" class="t9m">→</text>
+
+    <rect x="700" y="64" width="138" height="32" class="boxd"/>
+    <text x="769" y="84" class="t9" text-anchor="middle">Farmer health</text>
+    <text x="844" y="84" class="t9m">→</text>
+
+    <rect x="856" y="64" width="138" height="32" class="box"/>
+    <text x="925" y="84" class="t9" text-anchor="middle" font-weight="700">Intervene</text>
+  </g>
+  <text x="544" y="116" class="t9m" font-size="8">milk, fat, SNF</text>
+  <text x="700" y="116" class="t9m" font-size="8">attrition, growth, recovery</text>
+  <text x="856" y="116" class="t9m" font-size="8">reward, retain, route</text>
+  <text x="544" y="134" class="t9m" font-style="italic" font-size="8">not a KPI list — a triage funnel from "what's happening" to "who acts"</text>
+
+  <!-- ===== TOP NAV :: x24 y176 w992 h40 ===== -->
+  <rect x="24" y="176" width="992" height="40" class="box"/>
+  <rect x="32" y="184" width="168" height="24" class="navcur"/>
+  <text x="44" y="200" class="navw">Performance scorecard</text>
+
+  <rect x="208" y="184" width="96" height="24" class="navbox"/>
+  <text x="220" y="200" class="navg">Overview</text>
+
+  <rect x="312" y="184" width="120" height="24" class="navbox"/>
+  <text x="324" y="200" class="navg">HPC drilldown</text>
+
+  <rect x="440" y="184" width="120" height="24" class="navbox"/>
+  <text x="452" y="200" class="navg">Farmer analytics</text>
+
+  <rect x="568" y="184" width="88" height="24" class="navbox"/>
+  <text x="580" y="200" class="navg">Reports</text>
+
+  <!-- ===== GROUP 1: COLLECTION HEALTH :: y232 h96 ===== -->
+  <text x="24" y="228" class="grp">COLLECTION HEALTH</text>
+  <g>
+    <rect x="24" y="232" width="216" height="96" class="ok"/>
+    <text x="40" y="252" class="t8">MILK POURAGE / FARMER</text>
+    <text x="40" y="278" class="num">13.0</text>
+    <text x="92" y="278" class="t9m">L/farmer</text>
+    <text x="40" y="298" class="t9m">target 12.0 — ahead</text>
+
+    <rect x="248" y="232" width="216" height="96" class="ok"/>
+    <text x="264" y="252" class="t8">AVERAGE FAT</text>
+    <text x="264" y="278" class="num">4.4</text>
+    <text x="302" y="278" class="t9m">%</text>
+    <text x="264" y="298" class="t9m">target 3.5 — ahead</text>
+
+    <rect x="472" y="232" width="216" height="96" class="ok"/>
+    <text x="488" y="252" class="t8">AVERAGE SNF</text>
+    <text x="488" y="278" class="num">8.2</text>
+    <text x="526" y="278" class="t9m">%</text>
+    <text x="488" y="298" class="t9m">target 8.0 — ahead</text>
+
+    <rect x="696" y="232" width="296" height="96" class="crit"/>
+    <text x="712" y="252" class="t8">COST PER FAT KG</text>
+    <text x="712" y="278" class="num" fill="#C0463D">932.6</text>
+    <text x="780" y="278" class="t9m">₹/kg</text>
+    <text x="712" y="298" class="t9m">target 900.0 — over by 32.6</text>
+  </g>
+
+  <!-- ===== GROUP 2: FARMER HEALTH :: y356 h96 ===== -->
+  <text x="24" y="352" class="grp">FARMER HEALTH</text>
+  <g>
+    <rect x="24" y="356" width="216" height="96" class="crit"/>
+    <text x="40" y="376" class="t8">FARMER ATTRITION</text>
+    <text x="40" y="402" class="num" fill="#C0463D">8.1</text>
+    <text x="68" y="402" class="t9m">%</text>
+    <text x="40" y="422" class="t9m">target 8.0 — over by 0.1</text>
+
+    <rect x="248" y="356" width="216" height="96" class="crit"/>
+    <text x="264" y="376" class="t8">FARMERS PER HPC</text>
+    <text x="264" y="402" class="num" fill="#C0463D">19.4</text>
+    <text x="306" y="402" class="t9m">count</text>
+    <text x="264" y="422" class="t9m">target 25.0 — short by 5.6</text>
+
+    <rect x="472" y="356" width="216" height="96" class="ok"/>
+    <text x="488" y="376" class="t8">HPC PRODUCTIVITY</text>
+    <text x="488" y="402" class="num">251.7</text>
+    <text x="546" y="402" class="t9m">L/HPC</text>
+    <text x="488" y="422" class="t9m">target 250.0 — ahead</text>
+
+    <rect x="696" y="356" width="296" height="96" class="crit"/>
+    <text x="712" y="376" class="t8">COST PER SOLIDS KG</text>
+    <text x="712" y="402" class="num" fill="#C0463D">326.2</text>
+    <text x="780" y="402" class="t9m">₹/kg</text>
+    <text x="712" y="422" class="t9m">target 280.0 — over by 46.2</text>
+  </g>
+
+  <!-- ===== TABLE :: y480 h152 ===== -->
+  <rect x="24" y="480" width="992" height="152" class="box"/>
+  <text x="40" y="500" class="t10b">Metric breakdown — current vs target vs last month vs last year MTD</text>
+  <line x1="40" y1="512" x2="1000" y2="512" class="navbox"/>
+  <text x="48" y="526" class="t8">METRIC</text>
+  <text x="288" y="526" class="t8">CURRENT</text>
+  <text x="408" y="526" class="t8">TARGET</text>
+  <text x="528" y="526" class="t8">VARIANCE</text>
+  <text x="688" y="526" class="t8">LAST MONTH</text>
+  <text x="848" y="526" class="t8">LAST YEAR MTD</text>
+
+  <g>
+    <rect x="40" y="536" width="944" height="28" class="boxd"/>
+    <text x="48" y="554" class="t9">milk pourage / farmer</text>
+    <text x="288" y="554" class="t9">13.0</text>
+    <text x="408" y="554" class="t9">12.0</text>
+    <text x="528" y="554" class="t9" fill="#2E7D52">+1.0 (+8.0%)</text>
+    <text x="688" y="554" class="t9m">12.2  +0.8</text>
+    <text x="848" y="554" class="t9m">12.6  +0.3</text>
+
+    <rect x="40" y="564" width="944" height="28" class="boxd"/>
+    <text x="48" y="582" class="t9">farmers per HPC</text>
+    <text x="288" y="582" class="t9">19.4</text>
+    <text x="408" y="582" class="t9">25.0</text>
+    <text x="528" y="582" class="t9" fill="#C0463D">−5.6 (−22.3%)</text>
+    <text x="688" y="582" class="t9m">20.1  −0.7</text>
+    <text x="848" y="582" class="t9m">21.7  −2.3</text>
+
+    <rect x="40" y="592" width="944" height="28" class="boxd"/>
+    <text x="48" y="610" class="t9">cost per fat kg</text>
+    <text x="288" y="610" class="t9">932.6</text>
+    <text x="408" y="610" class="t9">900.0</text>
+    <text x="528" y="610" class="t9" fill="#C0463D">+32.6 (+3.6%)</text>
+    <text x="688" y="610" class="t9m">927.3  +5.4</text>
+    <text x="848" y="610" class="t9m">828.1  +104.5</text>
+  </g>
+
+  <text x="48" y="630" class="t9m" font-style="italic" font-size="8">… 4 more rows, same pattern</text>
+
+  <!-- ===== DESIGN PRINCIPLES :: y648 h54 ===== -->
+  <rect x="24" y="648" width="992" height="54" class="box"/>
+  <text x="40" y="666" class="t10b">Design principles</text>
+  <text x="40" y="682" class="t9m" font-size="8">Group by mental model, not data source.   ·   Every metric should answer "should I act, and who acts?"   ·   Cost-up isn't always bad — show why.</text>
+  <text x="40" y="694" class="t9m" font-size="8">Default view stays All India — zone is a drill-down, not a starting point.</text>
+
+  <!-- sticky 1: color logic tradeoff -->
+  <g transform="translate(696,330) rotate(2)" filter="url(#stickyshadow2)">
+    <rect x="0" y="0" width="296" height="64" fill="#FFC9C0"/>
+    <text x="12" y="18" class="stickh">Why is cost-up shown red?</text>
+    <text x="12" y="34" class="stick">932.6 is over target, but driven by</text>
+    <text x="12" y="48" class="stick">higher fat — a good outcome. flat</text>
+    <text x="12" y="60" class="stick">red/green rule hides that nuance.</text>
+  </g>
+
+  <!-- sticky 2: direction ambiguity -->
+  <g transform="translate(248,452) rotate(-2)" filter="url(#stickyshadow2)">
+    <rect x="0" y="0" width="216" height="68" fill="#C9E4D6"/>
+    <text x="12" y="18" class="stickh">Is lower good or bad?</text>
+    <text x="12" y="34" class="stick">fewer farmers/HPC could mean</text>
+    <text x="12" y="48" class="stick">better service density, not</text>
+    <text x="12" y="62" class="stick">attrition. flagged, not resolved.</text>
+  </g>
+
+  <!-- sticky 3: grouping rationale -->
+  <g transform="translate(40,168) rotate(-1.5)" filter="url(#stickyshadow2)">
+    <rect x="0" y="0" width="280" height="40" fill="#FFE998"/>
+    <text x="10" y="16" class="stickh">Why regroup from v1's flat KPI list?</text>
+    <text x="10" y="32" class="stick">CXO read top-to-bottom, not by theme.</text>
+  </g>
+
+  <!-- sticky 4: scope -->
+  <g transform="translate(700,168) rotate(1.5)" filter="url(#stickyshadow2)">
+    <rect x="0" y="0" width="280" height="40" fill="#FFE998"/>
+    <text x="10" y="16" class="stickh">Default: All India, not zone</text>
+    <text x="10" y="32" class="stick">zone view is a drill-down action, not default</text>
+  </g>
+
+</svg>
